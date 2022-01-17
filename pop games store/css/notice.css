@@ -1,0 +1,18 @@
+.notice{
+    display: flex;
+    justify-content: center;
+}
+.notice img{
+    width: 50%;
+}
+#notice_ex{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    text-decoration: none;
+    text-align: center;
+}
+#notice_ex li{
+    font-size: 25px;
+    display: block;
+
+}

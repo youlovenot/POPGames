@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pop games store</title>
+  <link href="jquery.bxslider/jquery.bxslider.css" rel="stylesheet" /> 
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="jquery.bxslider/jquery.bxslider.js"></script>
+  <script src="./index.js"></script>
+  <link href="./css/common.css" rel="stylesheet" type="text/css">
+  <link href="./css/header.css" rel="stylesheet" type="text/css">
+  <link href="./css/main.css" rel="stylesheet" type="text/css">
+  <link href="./css/footer.css" rel="stylesheet" type="text/css">
+  <script> 
+    $(document).ready(function(){
+      var height = $(".header_bottom").height();
+      var num = $(".ul li").length;
+      var max = height * num;
+      var move = 0;
+      function noticeRolling(){
+        move += height;
+        $(".ul").animate({"top":-move},500,function(){
+          if(move >= max){
+            $(this).css("top",0);
+            move = 0;
+          };
+    
+        });
+      };
+      noticeRollingOff = setInterval(noticeRolling,2000);
+      $(".ul").append($(".ul li").first().clone());
+    
+    });
+    </script>
+</head>
+<body>
+  <!-- POPUP --> 
+<div id="divpop" style="position:absolute;left:580px;top:50px;z-index:200;visibility:hidden;"> 
+  <table width=500 height=500 cellpadding=2 cellspacing=0> 
+  <tr> 
+      <td style="border:1px #666666 solid" height=360 align=center> 
+      <img src="./img/notice1.png">
+      </td> 
+  </tr> 
+  <tr> 
+      <form name="notice_form"> 
+      <td align=right bgcolor=white style="font-size: 20px;"> 
+          <input type="checkbox" name="chkbox" value="checkbox">오늘 하루 이 창을 열지 않음 
+          <a href="javascript:closeWin();"><B>[닫기]</B></a> 
+      </td> 
+      </tr> 
+      </form> 
+  </table> 
+  </div> 
+  <script language="Javascript"> 
+  cookiedata = document.cookie;    
+  if ( cookiedata.indexOf("maindiv=done") < 0 ){      
+      document.all['divpop'].style.visibility = "visible"; 
+      } 
+      else { 
+          document.all['divpop'].style.visibility = "hidden"; 
+  } 
+  </script>
+  <div id="container">
+    <header>
+      <div id="header">
+        <div id="header_top">
+          <div id="main_logo"><a href="./index.html"><img src="./img/main_logo.png"></a></div>
+        <ul id="top_menu">
+          <li><a href="goods.html">GOODS</a></li>
+          <li><a href="board_game.html">BOARD GAME</a></li>
+        </ul>
+          <ul id="join_menu">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">장바구니</a></li>
+            <li><a href="#">구매내역</a></li>
+          </ul>
+        </div>
+        
+      </div>
+    </header>
+    <main>
+      <div class="banner">
+        <ul class="slider_container">
+          <li class="slider"><img src="./img/banner_1.png"></li>
+          <li class="slider"><img src="./img/banner_2.png"></li>
+          <li class="slider"><img src="./img/banner_3.png"></li>
+          <li class="slider"><img src="./img/banner_4.png"></li>
+        </ul>
+      </div>
+      <a class="prev" onclick="plusSlides(-1, 0)">&lang;</a>
+      <a class="next" onclick="plusSlides(1, 0)">&rang;</a>
+      <div class="header_bottom">
+        <ul class="ul">
+          <li><a href="notice.html"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;※공지사항&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 필독!! 설 연휴 배송 공지사항입니다.</a></li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;※공지사항 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 배송지연 공지사항입니다.</li>
+        </ul>
+      </div>
+      
+      <ul class="section_name">
+        <li class="title">GOODS</li>
+        <li><a id="more_items" href="goods.html">
+          <div class="plus">더보기 +</div>
+        </a></li>
+      </ul>
+
+      <div id="panorama_items">
+        <div class="item_box">
+          <ul>
+            <a href="product_detail.html">
+              <li><img src="./img/goods/goods1.png"></li>
+              <li>팝콘 키홀더 </li>
+              <li>8,900원</li>
+            </a>
+          </ul>
+        </div>
+        <div class="item_box">
+          <ul>
+            <a href="product_detail.html">
+              <li><img src="./img/goods/goods12.png"></li>
+              <li>팝콘모양 오프너</li>
+              <li>8,000원</li>
+            </a>
+          </ul>
+        </div>
+        <div class="item_box">
+          <ul>
+            <a href="product_detail.html">
+              <li><img src="./img/goods/goods13.png"></li>
+              <li>팝콘 에어팟 케이스</li>
+              <li>18,000원</li>
+            </a>
+          </ul>
+        </div>
+        <div class="item_box">
+          <ul>
+            <a href="product_detail.html">
+              <li><img src="./img/goods/goods10.png"></li>
+              <li>팝콘 포켓 패브릭 포스터</li>
+              <li>24,000원</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <ul class="section_name">
+        <li class="title">BOARD GAME</li>
+        <li><a id="more_items" href="board_game.html">
+          <div class="plus">더보기 +</div>
+        </a></li>
+      </ul>
+      <div id="panorama_items">
+        <div class="item_box">
+          <ul>
+            <a href="product_detail.html">
+              <li><img src="./img/boardgame/boardgame1.png"></li>
+              <li>13일의 금요일 </li>
+              <li>15,000원</li>
+            </a>
+          </ul>
+        </div>
+        <div class="item_box">
+          <ul>
+            <a href="product_detail.html">
+              <li><img src="./img/boardgame/boardgame2.png"></li>
+              <li>할리갈리 카카오프렌즈</li>
+              <li>24,000원</li>
+            </a>
+          </ul>
+        </div>
+        <div class="item_box">
+          <ul>
+            <a href="product_detail.html">
+              <li><img src="./img/boardgame/boardgame3.png"></li>
+              <li>스플렌더</li>
+              <li>43,000원</li>
+            </a>
+          </ul>
+        </div>
+        <div class="item_box">
+          <ul>
+            <a href="product_detail.html">
+              <li><img src="./img/boardgame/boardgame4.png"></li>
+              <li>루미큐브 (타일주머니 증정)</li>
+              <li>55,000원</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+      <div class="footer_banner"><img src="./img/footer_banner1.png"></div>
+    </main>
+    <div class="clear"></div>
+    <footer>
+      <div id="footer_wrap">
+        <div class="f_logo"><a href="index.html"><img src="img/footer_logo.png"></a></div>
+        <ul id="vision">
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">게임소개</a></li>
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">고객지원</a></li>
+        </ul>
+        <ul id="engagement">
+          <li>CS CENTER</li>
+          <li>02-0000-0000</li>
+          <li>평일 09:00 ~ 18:00 (점심시간 12:00 ~ 13:00)<br>주말 및 공휴일 휴무</li>
+        </ul>
+        <ul id="company_info">
+          <li>대표 : pop   주소 : 서울특별시 강남구 테헤란로 218 2층   </li>
+          <li>사업자등록번호 : 100-10-10000</li>
+          <li id="copyright">COPYRIGHTⒸ 2022 POP GAMES. ALL RIGHTS RESERVED.</li>
+        </ul>
+      </div>
+      <div id="footer_fix">
+        <ul>
+          <a href="index.html"><li><img src="./img/btn_go_top.png"></li></a>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

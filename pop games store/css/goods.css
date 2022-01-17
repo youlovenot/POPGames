@@ -1,0 +1,44 @@
+.main{
+    /*border-top: solid 1px #ccc;*/
+}
+
+.section_name {
+    text-align: center;
+    margin: 80px 0 150px 0;
+  }
+   .section_name li {
+     display: inline-block;
+    margin: 10px;
+  }
+   .section_name .title {
+    font-size: 40px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+   
+   #panorama_items {
+    width: 100%;
+    text-align: center;
+  }
+   #panorama_items .item_box {
+    width: 20%;
+    margin-right: 30px;
+    display: inline-block;
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+  }
+  #panorama_items .item_box a {
+    text-decoration: none;
+    color: #444;
+  }
+  #panorama_items .item_box img {
+    width: 100%;
+  }
+  #panorama_items .item_box li {
+    font-weight: bold;
+    font-size: 13px;
+  }
+  #panorama_items .item_box img:hover  {
+    border: solid 1px #ccc;
+  }
+ 
+  

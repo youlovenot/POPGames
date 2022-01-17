@@ -1,0 +1,230 @@
+
+body{
+  font-family:sans-serif;
+}
+/* 메인 */
+main {
+  width: 100%;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 1.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+.banner {
+  overflow:hidden;
+  height: 600px;
+}
+ .slider_container {
+  width: 300vw;
+  transition-property: transform;
+  transition-duration: 1s;
+}
+.slider_container li.slider {
+  width: 100vw;
+  float: left;
+}
+.slider img {
+  width: 100%;
+}
+ .section_name {
+  margin: 80px 0 50px 150px;
+  text-align: left;
+}
+ .section_name li {
+   display: inline-block;
+  margin: 10px;
+}
+.section_name .title {
+  font-size: 50px;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+ 
+ #panorama_items {
+  width: 100%;
+  /* border: solid 1px #0f0; */
+  text-align: center;
+}
+ #panorama_items .item_box {
+  width: 20%;
+  margin-right: 30px;
+  display: inline-block;
+  border-bottom: solid 3px #ccc;
+  padding-bottom: 50px;
+  margin-top: 60px;
+  margin-bottom: 150px;
+}
+#panorama_items .item_box a {
+  text-decoration: none;
+  color: #444;
+}
+#panorama_items .item_box img {
+  width: 100%;
+}
+#panorama_items .item_box img:hover{
+  border: solid 1px #ccc;
+}
+#panorama_items .item_box li {
+  font-weight: bold;
+  font-size: 15px;
+}
+#more_items{
+  position: relative;
+  bottom: 10px;
+}
+#more_items .plus {
+  color: #444;
+  width: 100%;
+  border: solid 1px black;
+  padding: 8px;
+  text-align: center;
+  font-size: 14px;
+}
+a#more_items:link  {
+  text-decoration: none;
+}
+a#more_items div:hover  {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+}
+a#more_items div:visited  {
+  text-decoration: none;
+}
+/*제품 상세페이지*/
+#content{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+section#main {
+  width:990px;
+  margin:0 auto;
+}
+section#right {
+  width:1200px;
+  margin-top:100px;
+}
+/* 상품 구매 정보(상품 제목, 판매가, 제조사, 가격 등)  */
+section#right #summary h3 {
+  font-size:30px;
+  padding-bottom:8px;
+  margin-bottom: 30px;
+  border-bottom:solid 1px #444444;	
+}
+section#right #summary h3 span {
+  color:#444444;
+}
+section#right #summary1 {
+  float:left;
+  margin-top:40px;
+}
+section#right #summary1 img{
+  width: 190%;
+}
+section#right #summary2 h3 {
+  border-bottom:solid 1px #cccccc;
+}
+section#right #summary2 {
+  width:600px;
+  float:right;
+  margin-top:60px;
+}
+section#right #summary2 .item {
+  margin:20px 0 0 20px;
+  padding-bottom:10px;
+  border-bottom:solid 1px #cccccc;
+}
+section#right #summary2 .item li {
+  margin:10px 0 0 0; 
+  font-size: 20px;
+}
+section#right #summary2 .col1 {
+  width:150px;
+  float:left;
+}
+section#right #summary2 .col2 {
+  width:400px;
+  float:left;
+}
+section#right #summary2 .col2 select{
+  font-size: 20px;
+}
+
+section#right #summary2 .size li {
+  margin:5px 0; 
+}
+section#right #summary2 .buttons {
+  margin:20px 0 0 120px;
+}
+section#right #summary2 .buttons li {
+  display:inline;
+}
+/* 상품 설명 */
+section#right #explanation h3 {
+  font-size:16px;
+  padding-bottom:8px;
+  margin-top:70px;
+  border-bottom:solid 1px #444444;	
+  color:#444444;
+  font-size: 30px;
+}
+section#right #explanation h2 {
+  margin:20px 0 0 20px;
+}
+section#right #explanation .detail img {
+  width: 100%;
+  margin-top: 100px;
+}
+/* 유의 사항 */
+section#right #required {
+  margin-bottom: 100px;
+}
+section#right #required h3 {
+  font-size:30px;
+  padding-bottom:8px;
+  margin-top:60px;
+  border-bottom:solid 1px #444444;
+  color:#444444;	
+}
+section#right #required dl {
+  margin:20px 0 0 30px;
+}
+section#right #required dt {
+  font-size:18px;
+  font-weight:bold;
+  margin-top:20px;
+}
+section#right #required dd {
+  font-size:17px;
+  margin:5px 0 0 20px;
+}
+.footer_banner{
+  width: 100%;
+}
+.footer_banner img{
+  width: 99%;
+  height: 400px;
+  margin-left: 10px;
+  margin-bottom: 100px;
+}
+
+

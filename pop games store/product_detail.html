@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pop games store</title>
+    <link href="./css/common.css" rel="stylesheet" type="text/css">
+    <link href="./css/main.css" rel="stylesheet" type="text/css">
+    <link href="./css/header.css" rel="stylesheet" type="text/css">
+    <link href="./css/footer.css" rel="stylesheet" type="text/css">
+    <link href="./css/goods.css" rel="stylesheet" type="text/css">
+    <link href="./css/notice.css" rel="stylesheet" type="text/css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script> 
+      $(document).ready(function(){
+        var height = $(".header_bottom").height();
+        var num = $(".ul li").length;
+        var max = height * num;
+        var move = 0;
+        function noticeRolling(){
+          move += height;
+          $(".ul").animate({"top":-move},500,function(){
+            if(move >= max){
+              $(this).css("top",0);
+              move = 0;
+            };
+      
+          });
+        };
+        noticeRollingOff = setInterval(noticeRolling,2000);
+        $(".ul").append($(".ul li").first().clone());
+      
+      });
+      </script>
+</head>
+<body>
+    <div id="container">
+    <header>
+      <div id="header">
+        <div id="header_top">
+          <div id="main_logo"><a href="./index.html"><img src="./img/main_logo.png"></a></div>
+        <ul id="top_menu">
+          <li><a href="goods.html">GOODS</a></li>
+          <li><a href="board_game.html">BOARD GAME</a></li>
+        </ul>
+          <ul id="join_menu">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">장바구니</a></li>
+            <li><a href="#">구매내역</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main >
+        <div class="header_bottom">
+          <ul class="ul">
+            <li><a href="notice.html"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;공지사항&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 필독!! 설 연휴 배송 공지사항입니다.</a></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;공지사항 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 배송지연 공지사항입니다.</li>
+          </ul>  
+        </div>
+          <div id="content">
+        	<section id="right">
+                <section id="summary">
+                    <h3><span>product_detail</span> - goods</h3>
+                    <section id="summary1">
+                        <div class="image">
+                            <img src="./img/goods/goods1.png">
+                        </div>
+                    </section>
+                    <section id="summary2">
+                        <h3>팝콘 키홀더</h3>
+                        <div class="item">
+                            <ul>
+                                <li>
+                                    <div class="col1">판매가</div>
+                                    <div class="col2">8,900원</div>
+                                    <div class="clear"></div>
+                                </li>
+                                <li>
+                                    <div class="col1">배송방법</div>
+                                    <div class="col2">택배</div>
+                                    <div class="clear"></div>
+                                </li>
+                                <li>
+                                    <div class="col1">배송비</div>
+                                    <div class="col2">2,500 (10,000원이상 무료배송)</div>
+                                    <div class="clear"></div>
+                                </li>
+                                <li>
+                                    <div class="col1">수량</div>
+                                    <div class="col2"><input type="text"></div>
+                                    <div class="clear"></div>
+                                </li>
+                                <li>
+                                    <div class="col1">옵션</div>
+                                    <div class="col2">
+                                        <select>
+                                            <option>== 옵션 선택 ==</option>
+                                            <option>색상 - 브라운</option>
+                                            <option>색상 - 옐로우</option>
+                                        </select>
+                                    </div>
+                                    <div class="clear"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="buttons">
+                            <li><a href="#"><img src="./img/templatemo_addtocart.png"></a></li>
+                        </ul>
+                    </section>
+                    <div class="clear"></div>
+                </section>
+                <section id="explanation">
+                    <h3>상품 설명</h3>
+                    <div class="detail">
+                        <img src="./img/goods_ex1.png">
+                        <img src="./img/goods_ex2.png">
+                        <img src="./img/goods_ex3.png">
+                        <img src="./img/goods_ex4.png">
+                        <img src="./img/goods_ex5.png">
+                    </div>
+                </section>
+                <section id="required">
+                    <h3>유의 사항</h3>
+                    <dl>
+                        <dt> ○ 주문 전 참고 사항</dt>
+                        <dd>- 본 제품은 어린이 제품이 아닙니다. 만 14세 이상 사용가능합니다.</dd>
+                        <dd>- 제조국 : 중국</dd>
+                        <dd>- 수입여부 : Y</dd>
+                    </dl>
+                    <dl>
+                        <dt> ○ 배송 </dt>
+                        <dd>- 배송 지역 : 전국</dd>
+                        <dd>- 배송 비용 : 2,500원 (10,000원 이상 무료배송)</dd>
+                        <dd>- 배송 기간 : 2~3일</dd>
+                    </dl>
+                </section>
+            </section>
+            <div class="clear"></div> 
+        </div> 
+    </main>
+    <div class="clear"></div>
+    <footer>
+      <div id="footer_wrap">
+        <div class="f_logo"><a href="index.html"><img src="img/footer_logo.png"></a></div>
+        <ul id="vision">
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">게임소개</a></li>
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">고객지원</a></li>
+        </ul>
+        <ul id="engagement">
+          <li>CS CENTER</li>
+          <li>02-0000-0000</li>
+          <li>평일 09:00 ~ 18:00 (점심시간 12:00 ~ 13:00)<br>주말 및 공휴일 휴무</li>
+        </ul>
+        <ul id="company_info">
+          <li>pop  주소 : 서울특별시 강남구 테헤란로 218 2층   </li>
+          <li>사업자등록번호 : 100-10-10000</li>
+          <li id="copyright">COPYRIGHTⒸ 2022 POP GAMES. ALL RIGHTS RESERVED.</li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "맑은 고딕", "돋움";
+  font-size: 14px;
+  color: #444;
+}
+ul {
+  list-style: none;
+}
+.clear {
+  clear: both;
+}
