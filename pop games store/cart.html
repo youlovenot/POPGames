@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pop games store</title>
+    <link rel="shortcut icon" type="image⁄x-icon" href="./img/favicon.ico">
+    <link href="./css/common.css" rel="stylesheet" type="text/css">
+    <link href="./css/main.css" rel="stylesheet" type="text/css">
+    <link href="./css/header.css" rel="stylesheet" type="text/css">
+    <link href="./css/footer.css" rel="stylesheet" type="text/css">
+    <link href="./css/cart.css" rel="stylesheet" type="text/css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script> 
+      $(document).ready(function(){
+        var height = $(".header_bottom").height();
+        var num = $(".ul li").length;
+        var max = height * num;
+        var move = 0;
+        function noticeRolling(){
+          move += height;
+          $(".ul").animate({"top":-move},500,function(){
+            if(move >= max){
+              $(this).css("top",0);
+              move = 0;
+            };
+      
+          });
+        };
+        noticeRollingOff = setInterval(noticeRolling,2000);
+        $(".ul").append($(".ul li").first().clone());
+      
+      });
+      </script>
+</head>
+<body>
+    <div id="container">
+      <a name="top"></a>
+    <header>
+      <div id="header">
+        <div id="header_top">
+          <div id="main_logo"><a href="./index.html"><img src="./img/main_logo.png"></a></div>
+        <ul id="top_menu">
+          <li><a href="goods.html">GOODS</a></li>
+          <li><a href="board_game.html">BOARD GAME</a></li>
+        </ul>
+          <ul id="join_menu">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">장바구니</a></li>
+            <li><a href="#">구매내역</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main >
+        <div class="header_bottom">
+          <ul class="ul">
+            <li><a href="notice.html"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;공지사항&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 필독!! 설 연휴 배송 공지사항입니다.</a></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;공지사항 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 배송지연 공지사항입니다.</li>
+          </ul>  
+        </div>
+          <div id="content">
+        	<section id="right">
+                <div class="cart_top">
+                   <h2 id="cart_title"> 장바구니</h2>
+                   <h2 id="process"> <span>01 장바구니</span> &rang; 02 주문서 작성/결제 &rang; 03 주문완료</h2>
+            </div>
+                <table>
+                    <tr class="title">
+                        <th>선택</th>
+                        <th>상품명</th>
+                        <th>판매가</th>
+                        <th>수량</th>
+                        <th>배송비</th>
+                        <th>합계</th>
+                    </tr>
+                    <tr class="items">
+                        <td class="col1"><input type="checkbox"></td>
+                        <td class="col2">
+                            <img src="./img/goods/goods1.png">sjdy-005 펄실크 벽지/가로 125cm x세로 90cm
+                        </td>
+                        <td class="col3">19,000원</td>
+                        <td class="col4">
+                            1개
+                            <button>수량변경</button>
+                        </td>
+                        <td class="col6">3,000원</td>
+                        <td class="col7">22,000원</td>
+                    </tr>
+                    <tr class="items">
+                        <td class="col1"><input type="checkbox"></td>
+                        <td class="col2">
+                            <img src="./img/goods/goods2.png">sjdy-005 펄실크 벽지/가로 125cm x세로 90cm
+                        </td>
+                        <td class="col3">19,000원</td>
+                        <td class="col4">
+                            1개
+                            <button>수량변경</button>
+                        </td>
+                        <td class="col6">3,000원</td>
+                        <td class="col7">22,000원</td>
+                    </tr>
+                    <tr class="total_price">
+                        <td colspan="7">
+                            </td>
+                            </tr>
+                            <tr class="order_status_box">
+                                <td colspan="7">
+                                <div class="order_status">
+                                <p><span>고객님의 총 주문 합계 금액입니다</span></p>
+                                <div>
+                                    <ul>
+                                        <li class="col1">[상품 구매 금액]:</li>
+                                        <li class="col2">19,000원</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="col1">배송비:</li>
+                                        <li class="col2">3,000원</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="col1"><span>총 주문 합계 금액</span></li>
+                                        <li class="col2"><span>21,000원</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <ul id="order_buttons">
+                    <li><a href="index.html"><img src="./img/shopping.png"></a></li>
+                    <li><img src="./img/select_order.png"></li>
+                    <li><img src="./img/all_order.png"></li>
+                </ul>
+        </section>
+            <div class="clear"></div> 
+        </div> 
+        <div class="footer_banner"><img src="./img/footer_banner1.png"></div>
+    </main>
+    <div class="clear"></div>
+    <footer>
+      <div id="footer_wrap">
+        <div class="f_logo"><a href="index.html"><img src="img/footer_logo.png"></a></div>
+        <ul id="vision">
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">게임소개</a></li>
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">고객지원</a></li>
+        </ul>
+        <ul id="engagement">
+          <li>CS CENTER</li>
+          <li>02-0000-0000</li>
+          <li>평일 09:00 ~ 18:00 (점심시간 12:00 ~ 13:00)<br>주말 및 공휴일 휴무</li>
+        </ul>
+        <ul id="company_info">
+          <li>pop  주소 : 서울특별시 강남구 테헤란로 218 2층   </li>
+          <li>사업자등록번호 : 100-10-10000</li>
+          <li id="copyright">COPYRIGHTⒸ 2022 POP GAMES. ALL RIGHTS RESERVED.</li>
+        </ul>
+      </div>
+      <div id="footer_fix">
+        <ul>
+          <a href="#top"><li><img src="./img/btn_go_top.png"></li></a>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

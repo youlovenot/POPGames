@@ -1,0 +1,120 @@
+
+section#righ .cart_top ul{
+    display: inline-block;
+}
+
+section#right .cart_top #cart_title{
+    border-bottom: #cccccc 1px solid;	
+    font-size: 40px;
+    margin-bottom: 60px;
+}
+section#right .cart_top #process {
+    margin-bottom: 30px;
+    color: #cccccc;
+}
+section#right .cart_top #process span {
+    color: rgb(247, 25, 25);
+}
+section#right table {
+    width:100%;
+    margin:10px 0 0 0;
+    border-collapse:collapse;
+    border-top:solid 2px #cccccc;	
+    border-bottom:solid 2px #cccccc;		
+}
+section#right tr.title {
+    height:50px;
+    background-color:#e9e8e9;
+}
+section#right th {
+    padding:10px;
+    border-bottom:solid 2px #cccccc;		
+}
+section#right tr.items {
+    height:80px;
+    border-bottom:solid 2px #cccccc;
+}
+section#right tr.items td {
+    padding:5px;
+    border-bottom:solid 2px #cccccc;
+}
+section#right tr.items .col1 {
+    width:50px;
+    text-align:center;
+}
+section#right tr.items .col2 {
+
+}
+section#right tr.items .col3 {
+    width:60px;
+    text-align:center;
+}
+section#right tr.items .col4 {
+    width:80px;
+    text-align:center;
+}
+section#right tr.items .col5 {
+    width:80px;
+    text-align:center;
+}
+section#right tr.items .col5 {
+    width:80px;
+    text-align:center;
+}
+section#right tr.items .col7 {
+    width:80px;
+    text-align:center;
+}
+section#right tr.total_price {
+    height:25px;
+}
+section#right tr.total_price td {
+    text-align:right;	
+    padding:10px;
+}
+section#right tr.order_status_box {
+    height:100px;
+    background-color:#e9e8e9;
+    border-top:solid 2px #cccccc;	
+}
+section#right .order_status_box td {
+    vertical-align:top;
+}
+section#right .order_status {
+    position:relative;
+}
+section#right .order_status p {
+    position:absolute;
+    top:40px;
+    left:20px;
+}
+section#right .order_status div {
+    position:absolute;
+    top:20px;
+    left:480px;
+}
+section#right .order_status li {
+    display:inline-block;
+    margin:2px 0;
+}
+section#right .order_status .col1 {
+    width:150px;
+    text-align:right;
+}
+section#right .order_status .col2 {
+    width:80px;
+    text-align:right;	
+}
+section#right table span {
+    font-weight:bold;
+}
+section#right #order_buttons {
+    margin:20px 0 0 0;
+    text-align:center;
+}
+section#right #order_buttons li {
+    display:inline;
+}
+section#right #order_buttons li img{
+    width: 230px;
+}

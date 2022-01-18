@@ -173,11 +173,18 @@ section#right #summary2 .size li {
   margin:5px 0; 
 }
 section#right #summary2 .buttons {
-  margin:20px 0 0 120px;
+  margin:20px 0 0 60px;
+  width: 500px;
 }
+
 section#right #summary2 .buttons li {
   display:inline;
+  padding-left: 5px;
 }
+section#right #summary2 .buttons li img{
+  height: 55px;
+}
+
 /* 상품 설명 */
 section#right #explanation h3 {
   font-size:16px;

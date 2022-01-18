@@ -19,13 +19,6 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
 }
-$( document ).ready( function() {
-  $( '.slider_container' ).bxSlider( {
-    auto: true,
-    pause: 2000,
-    speed: 500,
-  } );
-} );
 
 function setCookie( name, value, expiredays ) { 
     var todayDate = new Date(); 

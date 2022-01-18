@@ -5,10 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>pop games store</title>
-  <link href="jquery.bxslider/jquery.bxslider.css" rel="stylesheet" /> 
+
   <script src="jquery-3.2.1.min.js"></script>
-  <script src="jquery.bxslider/jquery.bxslider.js"></script>
   <script src="./index.js"></script>
+  <link rel="shortcut icon" type="image⁄x-icon" href="./img/favicon.ico">
   <link href="./css/common.css" rel="stylesheet" type="text/css">
   <link href="./css/header.css" rel="stylesheet" type="text/css">
   <link href="./css/main.css" rel="stylesheet" type="text/css">
@@ -64,6 +64,7 @@
   } 
   </script>
   <div id="container">
+    <a name="top"></a>
     <header>
       <div id="header">
         <div id="header_top">
@@ -74,7 +75,7 @@
         </ul>
           <ul id="join_menu">
             <li><a href="#">로그인</a></li>
-            <li><a href="#">장바구니</a></li>
+            <li><a href="cart.html">장바구니</a></li>
             <li><a href="#">구매내역</a></li>
           </ul>
         </div>
@@ -84,10 +85,10 @@
     <main>
       <div class="banner">
         <ul class="slider_container">
+          <li class="slider"><img src="./img/banner_4.png"></li>
           <li class="slider"><img src="./img/banner_1.png"></li>
           <li class="slider"><img src="./img/banner_2.png"></li>
           <li class="slider"><img src="./img/banner_3.png"></li>
-          <li class="slider"><img src="./img/banner_4.png"></li>
         </ul>
       </div>
       <a class="prev" onclick="plusSlides(-1, 0)">&lang;</a>
@@ -214,7 +215,7 @@
       </div>
       <div id="footer_fix">
         <ul>
-          <a href="index.html"><li><img src="./img/btn_go_top.png"></li></a>
+          <a href="#top"><li><img src="./img/btn_go_top.png"></li></a>
         </ul>
       </div>
     </footer>
