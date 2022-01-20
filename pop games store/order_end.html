@@ -11,6 +11,7 @@
     <link href="./css/header.css" rel="stylesheet" type="text/css">
     <link href="./css/footer.css" rel="stylesheet" type="text/css">
     <link href="./css/cart.css" rel="stylesheet" type="text/css">
+    <link href="./css/order.css" rel="stylesheet" type="text/css">
     <script src="jquery-3.2.1.min.js"></script>
     <script> 
       $(document).ready(function(){
@@ -63,79 +64,90 @@
           <div id="content">
         	<section id="right">
                 <div class="cart_top">
-                   <h2 id="cart_title"> 장바구니</h2>
-                   <h2 id="process"> <span>01 장바구니</span> &rang; 02 주문서 작성/결제 &rang; 03 주문완료</h2>
+                   <h2 id="cart_title"> 주문완료</h2>
+                   <h2 id="process"> 01 장바구니 &rang; 02 주문서 작성/결제 &rang; <span>03 주문완료</span></h2>
             </div>
-                <table>
-                    <tr class="title">
-                        <th>선택</th>
-                        <th></th>
-                        <th>상품명</th>
-                        <th>판매가</th>
-                        <th>수량</th>
+            <div class="order_end"><img src="./img/order_su.png"></div>
+            <div class="order_zone_tit">
+                <h4>주문요약정보</h4>
+            </div>
+
+            <div class="order_table_type">
+                <table class="table_left">
+                    <colgroup>
+                        <col style="width:15%;">
+                        <col style="width:85%;">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th>결제수단</th>
+                        <td><div class="pay_with_list">
+                            <strong>무통장 입금</strong>
+                            <ul>
+                                <li>입금은행 : 신한</li>
+                                <li>입금계좌 : 60020040059</li>
+                                <li>예금주명 : 팝게임즈</li>
+                                <li>입금금액 : <strong class="deposit_money">15,500원</strong></li>
+                                <li>입금자명 : 임애선</li>
+                            </ul>
+                        </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>주문번호</th>
+                        <td>2201192244001194</td>
+                    </tr>
+                    <tr>
+                        <th>주문일자</th>
+                        <td>2022-01-19 22:44:41</td>
+                    </tr>
+                    <tr>
+                        <th>주문상품</th>
+                        <td>[팝게임즈 - 굿즈] 팝콘 키홀더</td>
+                    </tr>
+                    <tr>
+                        <th>주문자명</th>
+                        <td>임애선</td>
+                    </tr>
+                    <tr>
+                        <th>배송정보</th>
+                        <td>
+                            <p>
+                                <strong>임애선</strong> <br />
+                                [03730] 서울특별시 서대문구 통일로 395 (홍제 센트럴 IPARK) 11<br />
+                                  /    /  010-7417-7576<br />
+                                배송요청사항 : 
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>상품 금액</th>
+                        <td><strong class="order_payment_sum">13,000원</strong>
+                            <span class="add_currency"></span>
+                        </td>
+                    </tr>
+                    <tr>
                         <th>배송비</th>
-                        <th>합계</th>
-                    </tr>
-                    <tr class="items">
-                        <td class="col1"><input type="checkbox"></td>
-                        <td class="col2" id="left">
-                            <img src="./img/goods/goods1.png">
-                            
-                        </td>
-                        <td class="coladd"><div">팝콘 키홀더</div></td>
-                        <td class="col3">8,900원</td>
-                        <td class="col4">
-                            1개
-                            <button>수량변경</button>
-                        </td>
-                        <td class="col6">2,500원</td>
-                        <td class="col7">11,400원</td>
-                    </tr>
-                    <tr class="items">
-                        <td class="col1"><input type="checkbox"></td>
-                        <td class="col2" id="left">
-                            <img src="./img/goods/goods2.png">
-                        </td>
-                        <td class="coladd"><div">팝콘 마스크 스트랩</div></td>
-                        <td class="col3">9,900원</td>
-                        <td class="col4">
-                            1개
-                            <button>수량변경</button>
-                        </td>
-                        <td class="col6">2,500원</td>
-                        <td class="col7">12,400원</td>
-                    </tr>
-                    <tr class="total_price">
-                        <td colspan="7">
-                            </td>
-                            </tr>
-                            <tr class="order_status_box">
-                                <td colspan="7">
-                                <div class="order_status">
-                                <p><span>총 주문 금액</span></p>
-                                <div>
-                                    <ul>
-                                        <li class="col1">[상품 구매 금액]:</li>
-                                        <li class="col2">19,000원</li>
-                                    </ul>
-                                    <ul>
-                                        <li class="col1">배송비:</li>
-                                        <li class="col2">3,000원</li>
-                                    </ul>
-                                    <ul>
-                                        <li class="col1"><span>총 주문 합계 금액</span></li>
-                                        <li class="col2"><span>21,000원</span></li>
-                                    </ul>
-                                </div>
-                            </div>
+                        <td>기본배송 2,500원
+                            <span class="add_currency"></span>
                         </td>
                     </tr>
+                
+                    <tr>
+                        <th>총 결제금액</th>
+                        <td><strong class="order_payment_sum">15,500원</strong>
+                            <span class="add_currency"></span>
+                        </td>
+                    </tr>
+                    
                 </table>
-                <ul id="order_buttons">
-                    <li><a href="index.html"><img src="./img/shopping.png"></a></li>
-                    <li><a href="order.html"><img src="./img/select_order.png"></a></li>
-                    <li><a href="order.html"><img src="./img/all_order.png"></a></li>
-                </ul>
+            </div>
+            <!-- //order_info -->
+        <ul id="end_buttons">
+            <li><a href="index.html"><img src="./img/ok.png"></a></li>
+        </ul>
+        </div> 
+    </div>
         </section>
             <div class="clear"></div> 
         </div> 

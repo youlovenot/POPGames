@@ -4,6 +4,7 @@ section#righ .cart_top ul{
 }
 
 section#right .cart_top #cart_title{
+    padding-bottom: 10px;
     border-bottom: #cccccc 1px solid;	
     font-size: 40px;
     margin-bottom: 60px;
@@ -24,11 +25,13 @@ section#right table {
 }
 section#right tr.title {
     height:50px;
+    font-size: 16px;
+    text-align: center;
     background-color:#e9e8e9;
 }
 section#right th {
     padding:10px;
-    border-bottom:solid 2px #cccccc;		
+    border-bottom:solid 1px #dbdbdb;;		
 }
 section#right tr.items {
     height:80px;
@@ -36,17 +39,34 @@ section#right tr.items {
 }
 section#right tr.items td {
     padding:5px;
+    text-align: center;
     border-bottom:solid 2px #cccccc;
+    font-size: 17px;
 }
 section#right tr.items .col1 {
     width:50px;
     text-align:center;
 }
+section#right tr.items #left{
+    text-align: left;
+    padding-left: 20px;
+}
+section#right tr.items .col2 div{
+    display:inline-block;
+    padding-left: 20px;
+}
+section#right tr.items .col2 img{
+    width: 200px;
+}
+section#right tr.items .coladd {
+    width: 400px;
+    text-align: left;
+}
 section#right tr.items .col2 {
-
+    width:100px;
 }
 section#right tr.items .col3 {
-    width:60px;
+    width:100px;
     text-align:center;
 }
 section#right tr.items .col4 {
@@ -54,26 +74,24 @@ section#right tr.items .col4 {
     text-align:center;
 }
 section#right tr.items .col5 {
-    width:80px;
+    width:100px;
     text-align:center;
 }
-section#right tr.items .col5 {
-    width:80px;
+section#right tr.items .col6 {
+    width:100px;
     text-align:center;
 }
 section#right tr.items .col7 {
-    width:80px;
+    width:110px;
     text-align:center;
 }
 section#right tr.total_price {
-    height:25px;
+    height:80px;
 }
-section#right tr.total_price td {
-    text-align:right;	
-    padding:10px;
-}
+
 section#right tr.order_status_box {
-    height:100px;
+    height:120px;
+    font-size: 16px;
     background-color:#e9e8e9;
     border-top:solid 2px #cccccc;	
 }
@@ -85,13 +103,14 @@ section#right .order_status {
 }
 section#right .order_status p {
     position:absolute;
+    font-size: 25px;
     top:40px;
-    left:20px;
+    left:400px;
 }
 section#right .order_status div {
     position:absolute;
     top:20px;
-    left:480px;
+    left:900px;
 }
 section#right .order_status li {
     display:inline-block;
@@ -109,7 +128,7 @@ section#right table span {
     font-weight:bold;
 }
 section#right #order_buttons {
-    margin:20px 0 0 0;
+    margin:50px 0 100px 0;
     text-align:center;
 }
 section#right #order_buttons li {
@@ -117,4 +136,12 @@ section#right #order_buttons li {
 }
 section#right #order_buttons li img{
     width: 230px;
+}
+/*order.html*/
+section#right #pay_buttons {
+    margin:50px 0 100px 0;
+    text-align:center;
+}
+section#right #pay_buttons li img{
+    width: 320px;
 }
