@@ -13,35 +13,23 @@
 	</resultMap>
 
 	<insert id="insertMember">
-		<![CDATA[
-			insert into board(seq, title, writer, content)
-			values((select nvl(max(seq), 0)+1 from board),#{title},#{writer},#{content})
-		]]>
+			INSERT INTO MEMBER(ID, PASSWORD, NAME, PHONE, EMAIL, ZIPCODE, ADRESS1, ADRESS2)
+			VALUES(#{id},#{password},#{name},#{phone},#{email},#{zipcode},#{adress1},#{adress2})
 	</insert>
 	
 	<update id="updateMember">
-		<![CDATA[
-			update board set title=#{title}, content=#{content} where seq=#{seq}
-		]]>
+			UPDATE MEMBER SET
+			PASSWORD=#{password}, PHONE=#{phone]}, EMAIL=#{email}, NAME=#{name}
+			ZIPCODE=#{zipcode}, ADRESS1=#{address1}, ADRESS2=#{adress2}
+			where ID=#{id}
 	</update>
 	
 	<delete id="deleteMember">
-		<![CDATA[
-			delete board where seq=#{seq}
-		]]>
+			DELETE MEMBER WHERE ID=#{id}
 	</delete>
 	
 	<select id="getMember" resultType="member">
-		<![CDATA[
-			select * from board where seq=#{seq}
-		]]>
+			SELECT * FORM MEMBER WHERE ID=#{id}
 	</select>
 	
-	<select id="getMemberList" resultType="member">
-		<![CDATA[
-			select * from board
-			where title like '%'||#{searchKeyword}||'%'
-			order by seq desc
-		]]>
-	</select>
 </mapper>

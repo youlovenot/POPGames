@@ -1,16 +1,26 @@
 package com.springbook.biz.member;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+// VO(Value Object)
+@Entity
+@Table(name="MEMBER")
 public class MemberVO {
+	@Id
+	@GeneratedValue
 	private String id;
 	private String password;
 	private String name;
 	private String phone;
 	private String email;
-	private String nickname;
 	private String zipcode;
 	private String adress1;
 	private String adress2;
 	
+	// Getter/Setter 메소드
 	public String getId() {
 		return id;
 	}
@@ -41,12 +51,6 @@ public class MemberVO {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getNickname() {
-		return nickname;
-	}
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
-	}
 	public String getZipcode() {
 		return zipcode;
 	}
@@ -65,10 +69,11 @@ public class MemberVO {
 	public void setAdress2(String adress2) {
 		this.adress2 = adress2;
 	}
+	
 	@Override
 	public String toString() {
 		return "UserVO [id=" + id + ", password=" + password + ", name=" + name
-				+ "phone" + phone + "email" + email + "nickname" + nickname
-				+ "zipcode" + zipcode + "adress1" + adress1 + "adress2" + adress2 + "]";
+				+ "phone" + phone + "email" + email + "zipcode" + zipcode
+				+ "adress1" + adress1 + "adress2" + adress2 + "]";
 	}
 }
