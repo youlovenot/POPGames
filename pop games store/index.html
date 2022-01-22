@@ -21,7 +21,7 @@
       var move = 0;
       function noticeRolling(){
         move += height;
-        $(".ul").animate({"top":-move},500,function(){
+        $(".ul").animate({"top":-move},1000,function(){
           if(move >= max){
             $(this).css("top",0);
             move = 0;
@@ -81,6 +81,12 @@
         </div>
         
       </div>
+      <div class="header_bottom">
+        <ul class="ul">
+          <li><a href="notice.html"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;※공지사항&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 필독!! 설 연휴 배송 공지사항입니다.</a></li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;※공지사항 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 배송지연 공지사항입니다.</li>
+        </ul>
+      </div>
     </header>
     <main>
       <div class="banner">
@@ -93,13 +99,7 @@
       </div>
       <a class="prev" onclick="plusSlides(-1, 0)">&lang;</a>
       <a class="next" onclick="plusSlides(1, 0)">&rang;</a>
-      <div class="header_bottom">
-        <ul class="ul">
-          <li><a href="notice.html"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;※공지사항&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 필독!! 설 연휴 배송 공지사항입니다.</a></li>
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;※공지사항 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 배송지연 공지사항입니다.</li>
-        </ul>
-      </div>
-      
+
       <ul class="section_name">
         <li class="title">GOODS</li>
         <li><a id="more_items" href="goods.html">
@@ -191,6 +191,7 @@
         </div>
       </div>
       <div class="footer_banner"><img src="./img/footer_banner1.png"></div>
+      <a href=""></a>
     </main>
     <div class="clear"></div>
     <footer>
@@ -215,7 +216,6 @@
       </div>
       <div id="footer_fix">
         <ul>
-          <a href="#"><li><img src="./img/btn_go_main .png"></li></a>
           <a href="#top"><li><img src="./img/btn_go_top.png"></li></a>
         </ul>
       </div>
