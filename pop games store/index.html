@@ -3,25 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
   <title>pop games store</title>
 
   <script src="jquery-3.2.1.min.js"></script>
-  <script src="./index.js"></script>
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <link rel="shortcut icon" type="image⁄x-icon" href="./img/favicon.ico">
   <link href="./css/common.css" rel="stylesheet" type="text/css">
   <link href="./css/header.css" rel="stylesheet" type="text/css">
   <link href="./css/main.css" rel="stylesheet" type="text/css">
   <link href="./css/footer.css" rel="stylesheet" type="text/css">
+
   <script> 
     $(document).ready(function(){
-      var height = $(".header_bottom").height();
-      var num = $(".ul li").length;
+      var height = $(".bottom_rolling").height();
+      var num = $(".ul_ul .li_li").length;
       var max = height * num;
       var move = 0;
       function noticeRolling(){
         move += height;
-        $(".ul").animate({"top":-move},1000,function(){
+        $(".ul_ul").animate({"top":-move},600,function(){
           if(move >= max){
             $(this).css("top",0);
             move = 0;
@@ -30,23 +37,54 @@
         });
       };
       noticeRollingOff = setInterval(noticeRolling,2000);
-      $(".ul").append($(".ul li").first().clone());
+      $(".ul").append($(".ul .li").first().clone());
     
     });
     </script>
 </head>
 <body>
+  <div id="myModal" class="modal fade">
+    <div class="modal-dialog modal-login">
+      <div class="modal-content">
+        <div class="modal-header">				
+          <h4 class="modal-title">Sign In</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form action="/examples/actions/confirmation.php" method="post">
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input type="text" class="form-control" name="username" placeholder="Username" required="required">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <input type="text" class="form-control" name="password" placeholder="Password" required="required">
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block btn-lg">Sign In</button>
+            </div>
+            <p class="hint-text"><a href="#">Forgot Password?</a></p>
+          </form>
+        </div>
+        <div class="modal-footer">Don't have an account? <a href="#">Create one</a></div>
+      </div>
+    </div>
+  </div>
   <!-- POPUP --> 
-<div id="divpop" style="position:absolute;left:580px;top:50px;z-index:200;visibility:hidden;"> 
-  <table width=500 height=500 cellpadding=2 cellspacing=0> 
+<div id="divpop" style="position:absolute;left:400px;top:50px;z-index:200;visibility:hidden;"> 
+  <table> 
   <tr> 
-      <td style="border:1px #666666 solid" height=360 align=center> 
+      <td> 
       <img src="./img/notice1.png">
       </td> 
   </tr> 
   <tr> 
       <form name="notice_form"> 
-      <td align=right bgcolor=white style="font-size: 20px;"> 
+      <td align=right bgcolor=white style="font-size: 16px;"> 
           <input type="checkbox" name="chkbox" value="checkbox">오늘 하루 이 창을 열지 않음 
           <a href="javascript:closeWin();"><B>[닫기]</B></a> 
       </td> 
@@ -74,16 +112,16 @@
           <li><a href="board_game.html">BOARD GAME</a></li>
         </ul>
           <ul id="join_menu">
-            <li><a href="#">로그인</a></li>
+            <li><a a href="#myModal" class="trigger-btn" data-toggle="modal">로그인</a></li>
             <li><a href="cart.html">장바구니</a></li>
             <li><a href="#">구매내역</a></li>
           </ul>
         </div>
         
       </div>
-      <div class="header_bottom">
-        <ul class="ul">
-          <li><a href="notice.html"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;※공지사항&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 필독!! 설 연휴 배송 공지사항입니다.</a></li>
+      <div class="bottom_rolling">
+        <ul class="ul_ul">
+          <li class="li_li"><a href="notice.html"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;※공지사항&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 필독!! 설 연휴 배송 공지사항입니다.</a></li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;※공지사항 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 배송지연 공지사항입니다.</li>
         </ul>
       </div>
@@ -194,6 +232,7 @@
       <a href=""></a>
     </main>
     <div class="clear"></div>
+  
     <footer>
       <div id="footer_wrap">
         <div class="f_logo"><a href="index.html"><img src="img/footer_logo.png"></a></div>
@@ -221,5 +260,6 @@
       </div>
     </footer>
   </div>
+  <script src="https://www.markuptag.com/bootstrap/5/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
