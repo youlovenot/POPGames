@@ -223,6 +223,9 @@ section#right #required dd {
   font-size:14px;
   margin:5px 0 0 20px;
 }
+#divpop table img{
+  width: 500px;
+}
 .footer_banner{
   width: 100%;
 }

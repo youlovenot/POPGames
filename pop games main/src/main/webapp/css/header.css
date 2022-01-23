@@ -76,7 +76,7 @@ header {
   border: rgb(228, 226, 226) 1px solid;
   position: relative;
   width: 100%;
-  font-size: 14px;
+  font-size: 13px;
   overflow: hidden;
 }
 .header_bottom a{
@@ -84,14 +84,30 @@ header {
   color: rgb(83, 82, 82);
 }
 .header_bottom .ul{
-  height: 25px;
+  height: 20px;
   position: relative;
 }
 .header_bottom .ul li{
   width: 100%;
-  height: 25px;
+  height: 20px;
   margin-top: 5px;
 }
+/*로그인창*/
+.card {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
 
+}
+
+.form-signin .form-control {
+position: relative;
+height: auto;
+-webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+     box-sizing: border-box;
+padding: 10px;
+font-size: 15px;
+}
 
 
