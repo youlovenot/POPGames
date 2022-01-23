@@ -13,6 +13,10 @@ public class MemberServiceImpl implements MemberService {
 	@Autowired
 	private MemberDAO memberDAO;
 
+	public void setMemberDAO(MemberDAO memberDAO) {
+		this.memberDAO=memberDAO;
+	}
+	
 	public void insertMember(MemberVO vo) {
 		memberDAO.insertMember(vo);
 	}
