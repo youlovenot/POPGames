@@ -32,12 +32,49 @@
           <li><a href="store/goods.jsp">GOODS</a></li>
           <li><a href="store/board_game.jsp">BOARD GAME</a></li>
         </ul>
-          <ul id="join_menu">
-            <li><a data-toggle="modal" href="#myModal">로그인</a></li>
+          <ul id="join_menu" class="navi">
+            <li><a href="#" id="loginLabel">로그인</a>
+            	<div class="loginbox">
+                <form action="login.php" method="post">
+                  <p>
+                    <label for="logid">ID</label>
+                    <input type="text" name="logid" id="logid" />
+                  </p>
+                  <p>
+                    <label for="logpw">PW</label>
+                    <input type="password" name="logpw" id="logpw" />
+                  </p>
+                  <p>
+                    <input  class="loginBtn" type="image"  src="./img/loginBtn.png"/>
+                  </p>
+                  <p class="memberInfo">ID/PW 찾기 | 회원가입 </p>
+                </form>
+              </div>
+            </li>
             <li><a href="store/cart.jsp">장바구니</a></li>
             <li><a href="#">구매내역</a></li>
           </ul>
         </div> 
+        <script type="text/javascript" >
+          (function($){
+             
+           //로그인 버튼	 
+            $("#loginLabel").click(function(e) {     
+              e.preventDefault();
+              if($('.loginbox').css('display')== 'none'){				
+                  $('.loginbox').slideDown(); 
+              }
+              else {
+                            $('.loginbox').slideUp();
+              }
+            });
+                   //닫힘버튼
+            $(".closeBtn").click(function(e) {
+             
+                 $('.loginbox').slideUp();
+            });				
+          })(jQuery);
+        </script>
       </div>
       <div class="header_bottom">
         <ul class="ul">
