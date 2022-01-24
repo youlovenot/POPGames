@@ -13,5 +13,17 @@ create table member(
 	adress2 varchar(20)
     );
 
-insert into member(id,password,name)
-values("admin","admin1234","관리자");
+select * from member;
+
+create table notice(
+	seq int primary key,
+    title varchar(20) not null,
+    content varchar(1000) not null,
+    regdate datetime default CURRENT_TIMESTAMP,
+    cnt int default 0
+	);
+    
+select * from notice;
+
+insert into notice(seq, title, context)
+values(0, '제목','내용');

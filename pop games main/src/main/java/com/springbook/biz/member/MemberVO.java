@@ -1,16 +1,7 @@
 package com.springbook.biz.member;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
 // VO(Value Object)
-@Entity
-@Table(name="MEMBER")
 public class MemberVO {
-	@Id
-	@GeneratedValue
 	private String id;
 	private String password;
 	private String name;
@@ -73,7 +64,7 @@ public class MemberVO {
 	@Override
 	public String toString() {
 		return "UserVO [id=" + id + ", password=" + password + ", name=" + name
-				+ "phone" + phone + "email" + email + "zipcode" + zipcode
-				+ "adress1" + adress1 + "adress2" + adress2 + "]";
+				+ ", phone=" + phone + ", email=" + email + ", zipcode=" + zipcode
+				+ ", adress1=" + adress1 + ", adress2=" + adress2 + "]";
 	}
 }
