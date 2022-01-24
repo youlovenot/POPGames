@@ -3,6 +3,7 @@ package snakegame;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -12,6 +13,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+
+import snakegame.KeyListener;
 
 public class SnakeGame extends JFrame {
 	private Image screenImage;
@@ -27,6 +30,10 @@ public class SnakeGame extends JFrame {
 
 	private JButton exitButton = new JButton(exitButtonBasicImage);
 	private JButton startButton = new JButton(startButtonBasicImage);
+	
+	public static Game game;
+	
+	public boolean isGameScreen = false;
 
 	private int mouseX, mouseY;
 
@@ -40,6 +47,8 @@ public class SnakeGame extends JFrame {
 		setVisible(true);
 		setBackground(new Color(0, 0, 0, 0));
 		setLayout(null);
+		
+		addKeyListener(new KeyListener());
 
 		exitButton.setBounds(510, 0, 30, 30);
 		exitButton.setBorderPainted(false);
@@ -97,6 +106,7 @@ public class SnakeGame extends JFrame {
 			public void mousePressed(MouseEvent e) {
 				Music buttonPressedMusic = new Music("buttonPressedMusic.mp3", false);
 				buttonPressedMusic.start();
+				gameStart();
 			}
 		});
 		add(startButton);
@@ -120,7 +130,7 @@ public class SnakeGame extends JFrame {
 		add(menuBar);
 
 		Music introMusic = new Music("introMusic.mp3", true);
-		introMusic.start();
+		//introMusic.start();
 	}
 
 	public void paint(Graphics g) {
@@ -130,13 +140,18 @@ public class SnakeGame extends JFrame {
 		g.drawImage(screenImage, 0, 0, null);
 	}
 
-	public void enterMain() {
+	public void gameStart() {
+		game = new Game();
+		isGameScreen=true;
 		startButton.setVisible(false);
 		background = new ImageIcon(Main.class.getResource("../img/mainBackGround.jpg")).getImage();
+		game.start();
+		setFocusable(true);
 	}
 
 	public void screenDraw(Graphics g) {
 		g.drawImage(background, 0, 0, null);
+		if(isGameScreen)game.screenDraw(g);
 		paintComponents(g);
 		this.repaint();
 	}
