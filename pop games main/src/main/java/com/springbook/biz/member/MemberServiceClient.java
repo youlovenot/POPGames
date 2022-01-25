@@ -1,7 +1,5 @@
 package com.springbook.biz.member;
 
-import java.util.List;
-
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 

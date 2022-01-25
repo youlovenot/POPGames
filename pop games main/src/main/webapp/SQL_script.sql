@@ -10,8 +10,14 @@ create table member(
 	email varchar(20),
 	zipcode varchar(20),
 	adress1 varchar(20),
-	adress2 varchar(20)
+	adress2 varchar(20),
+    role varchar(20) not null
     );
+
+insert into member(id, password, name, role)
+values('admin','admin1234', '관리자', 'Admin');
+insert into member
+values('youlovenot','Pa$$w0rd', '이상훈','010-1111-1111', 'youlovenot@naver.com','123-456','메롱시티','파인에플집' ,'User'); 
 
 select * from member;
 
@@ -25,5 +31,5 @@ create table notice(
     
 select * from notice;
 
-insert into notice(seq, title, context)
-values(0, '제목','내용');
+insert into notice(seq, title, content)
+values(1, '제목1','내용1');
