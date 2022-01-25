@@ -27,10 +27,11 @@
 <header>
       <div id="header">
         <div id="header_top">
-          <div id="main_logo"><a href="../index.jsp"><img src="../img/main_logo.png"></a></div>
+          <div id="main_logo"><a href="../index.jsp"><img src="../img/main_logo2.png"></a></div>
         <ul id="top_menu">
-          <li><a href="goods.jsp">GOODS</a></li>
-          <li><a href="board_game.jsp">BOARD GAME</a></li>
+          <li><a href="goods.jsp">GOODS SHOP</a></li>
+          <li><a href="board_game.jsp">BOARD GAME SHOP</a></li>
+          <li><a href="#">GAME</a></li>
         </ul>
           <ul id="join_menu" class="navi">
             <li><a href="#" id="loginLabel">로그인</a>
