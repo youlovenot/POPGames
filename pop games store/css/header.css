@@ -48,7 +48,7 @@ header {
 #header #header_top #main_logo {
 
   display: flex;
-  margin: 20px 0 0 40px;
+  margin: 10px 0 0 40px;
 }
 #header #header_top #main_logo img{
   width: 100%;

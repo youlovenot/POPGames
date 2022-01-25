@@ -135,6 +135,44 @@
           </ul>
         </div>
       </div>
+      <div id="panorama_items">
+        <div class="item_box">
+          <ul>
+            <a href="#">
+              <li><img src="../img/boardgame/boardgame13.png"></li>
+              <li>사가니</li>
+              <li>42,000원</li>
+            </a>
+          </ul>
+        </div>
+        <div class="item_box">
+          <ul>
+            <a href="#">
+              <li><img src="../img/boardgame/boardgame14.png"></li>
+              <li>디렉티브 모던 크라임 시즌1</li>
+              <li>26,000원</li>
+            </a>
+          </ul>
+        </div>
+        <div class="item_box">
+          <ul>
+            <a href="#">
+              <li><img src="../img/boardgame/boardgame15.png"></li>
+              <li>캔트스탑</li>
+              <li>21,000원</li>
+            </a>
+          </ul>
+        </div>
+        <div class="item_box">
+          <ul>
+            <a href="#">
+              <li><img src="../img/boardgame/boardgame16.png"></li>
+              <li>골드</li>
+              <li>11,000원</li>
+            </a>
+          </ul>
+        </div>
+      </div>
     </main>
     <div class="clear"></div>
     <%@ include file="footer.jsp" %>
