@@ -6,7 +6,6 @@
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/index.js"></script>
   <link rel="shortcut icon" type="image⁄x-icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="css/common.css" rel="stylesheet" type="text/css">
   <link href="css/main.css" rel="stylesheet" type="text/css">
   <script> 
@@ -33,7 +32,7 @@
 </head>
 <body>
   <!-- POPUP --> 
-<div id="divpop" style="position:absolute;left:580px;top:50px;z-index:200;visibility:hidden;"> 
+<div id="divpop" style="position:absolute;left:370px;top:50px;z-index:200;visibility:hidden;"> 
   <table> 
   <tr> 
       <td> 
@@ -42,7 +41,7 @@
   </tr> 
   <tr> 
       <form name="notice_form"> 
-      <td align=right bgcolor=white style="font-size: 20px;"> 
+      <td align=right bgcolor=white style="font-size: 14px;"> 
           <input type="checkbox" name="chkbox" value="checkbox">오늘 하루 이 창을 열지 않음 
           <a href="javascript:closeWin();"><B>[닫기]</B></a> 
       </td> 
@@ -167,46 +166,7 @@
       <div class="footer_banner"><img src="img/footer_banner1.png"></div>
       <a href=""></a>
     </main>
-          <!-- Modal -->
-
-  <div class="modal fade" id="myModal" role="dialog"> <!-- 사용자 지정 부분① : id명 -->
-
-    <div class="modal-dialog">
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="card align-middle" style="width:25rem; border-radius:20px;">
-            <div class="card-title" style="margin-top:30px;">
-              <h2 class="card-title text-center" style="color:#113366;">로그인 </h2>
-            </div>
-            <div class="card-body">
-              <form class="form-signin" method="POST" onSubmit="logincall();return false">
-                <h5 class="form-signin-heading">로그인 정보를 입력하세요</h5>
-                <label for="inputEmail" class="sr-only">Your ID</label>
-                <input type="text" id="uid" class="form-control" placeholder="Your ID" required autofocus><BR>
-                <label for="inputPassword" class="sr-only">Password</label>
-                <input type="password" id="upw" class="form-control" placeholder="Password" required><br>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" value="remember-me"> 기억하기
-                  </label>
-                </div>
-                <button id="btn-Yes" class="btn btn-lg btn-primary btn-block" type="submit">로 그 인</button>
-              </form>
-              
-            </div>
-          </div>
-        
-          <div class="modal">
-          </div>
-            <!-- Optional JavaScript -->
-            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
-        </div>
-      </div>
-    </div>
-  </div>
+         
     <div class="clear"></div>
     <%@ include file="footer.jsp" %>
   </div>

@@ -37,7 +37,6 @@
 }
 header {
   width: 100%;
-
 }
 #header {
   height: 80px;
@@ -46,11 +45,12 @@ header {
   align-items: center;
  /* border-bottom: #ccc 1px solid;*/
 }
-#header #main_logo {
+#header #header_top #main_logo {
+
   display: flex;
   margin: 20px 0 0 40px;
 }
-#header #main_logo img{
+#header #header_top #main_logo img{
   width: 100%;
 }
 
@@ -76,7 +76,7 @@ header {
   border: rgb(228, 226, 226) 1px solid;
   position: relative;
   width: 100%;
-  font-size: 13px;
+  font-size: 15px;
   overflow: hidden;
 }
 .header_bottom a{
@@ -84,30 +84,36 @@ header {
   color: rgb(83, 82, 82);
 }
 .header_bottom .ul{
-  height: 20px;
+  height: 25px;
   position: relative;
 }
 .header_bottom .ul li{
   width: 100%;
-  height: 20px;
-  margin-top: 5px;
+  height: 25px;
+  margin-top: 8px;
 }
 /*로그인창*/
-.card {
-  margin: 0 auto; /* Added */
-  float: none; /* Added */
-  margin-bottom: 10px; /* Added */
+.navi {padding:0;margin:0; list-style:none; z-index: 500;}
+ .navi li {float:left; margin-right:10px; position:relative;}
+ 
+ .navi a:link, a:visited {color:#000;text-decoration:none;}
+ .navi a:hover, a:active {color:#c00;text-decoration:none;}
+ 
+  
+ #loginLabel {display:block;}
 
+.loginbox {display:none; width:280px;height:170px; 
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding-left:17px;padding-top:35px;  background:white; color:#999; 
+  font-family:'돋움';font-weight:bold; font-size:15px;position:absolute;
+  right: 2px;
 }
+.loginbox form {margin:0;padding:0;}
+.loginbox p{margin-top:0px;margin-bottom:8px; margin-bottom:6px; }
+.loginbox #logid, #logpw {border: rgb(189, 187, 187) 1px solid; color:#999;  width:200px; padding:5px;margin-left:10px; height: 20px;}  
+.loginbox label{width:24px; display:inline-block;margin:0;padding:0;} 
+ 
+.loginBtn { position:relative; top: 10px; width: 255px; } 
 
-.form-signin .form-control {
-position: relative;
-height: auto;
--webkit-box-sizing: border-box;
- -moz-box-sizing: border-box;
-     box-sizing: border-box;
-padding: 10px;
-font-size: 15px;
-}
-
-
+.loginbox .memberInfo {margin-top:20px;text-align: center; margin-right: 20px;}

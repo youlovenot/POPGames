@@ -10,25 +10,21 @@
 
   <script src="jquery-3.2.1.min.js"></script>
   <script src="index.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
   <link rel="shortcut icon" type="image⁄x-icon" href="./img/favicon.ico">
   <link href="./css/common.css" rel="stylesheet" type="text/css">
-  <link href="./css/header.css" rel="stylesheet" type="text/css">
   <link href="./css/main.css" rel="stylesheet" type="text/css">
+  <link href="./css/header.css" rel="stylesheet" type="text/css">
   <link href="./css/footer.css" rel="stylesheet" type="text/css">
 
   <script> 
     $(document).ready(function(){
-      var height = $(".bottom_rolling").height();
-      var num = $(".ul_ul .li_li").length;
+      var height = $(".header_bottom").height();
+      var num = $(".ul li").length;
       var max = height * num;
       var move = 0;
       function noticeRolling(){
         move += height;
-        $(".ul_ul").animate({"top":-move},600,function(){
+        $(".ul").animate({"top":-move},800,function(){
           if(move >= max){
             $(this).css("top",0);
             move = 0;
@@ -37,43 +33,13 @@
         });
       };
       noticeRollingOff = setInterval(noticeRolling,2000);
-      $(".ul").append($(".ul .li").first().clone());
+      $(".ul").append($(".ul li").first().clone());
     
     });
     </script>
 </head>
 <body>
-  <div id="myModal" class="modal fade">
-    <div class="modal-dialog modal-login">
-      <div class="modal-content">
-        <div class="modal-header">				
-          <h4 class="modal-title">Sign In</h4>
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        </div>
-        <div class="modal-body">
-          <form action="/examples/actions/confirmation.php" method="post">
-            <div class="form-group">
-              <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                <input type="text" class="form-control" name="username" placeholder="Username" required="required">
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                <input type="text" class="form-control" name="password" placeholder="Password" required="required">
-              </div>
-            </div>
-            <div class="form-group">
-              <button type="submit" class="btn btn-primary btn-block btn-lg">Sign In</button>
-            </div>
-            <p class="hint-text"><a href="#">Forgot Password?</a></p>
-          </form>
-        </div>
-        <div class="modal-footer">Don't have an account? <a href="#">Create one</a></div>
-      </div>
-    </div>
-  </div>
+ 
   <!-- POPUP --> 
 <div id="divpop" style="position:absolute;left:400px;top:50px;z-index:200;visibility:hidden;"> 
   <table> 
@@ -111,17 +77,53 @@
           <li><a href="goods.html">GOODS</a></li>
           <li><a href="board_game.html">BOARD GAME</a></li>
         </ul>
-          <ul id="join_menu">
-            <li><a a href="#myModal" class="trigger-btn" data-toggle="modal">로그인</a></li>
+          <ul id="join_menu" class="navi">
+            <li><a href="#" id="loginLabel">로그인</a>
+              <div class="loginbox">
+                <form action="login.php" method="post">
+                  <p>
+                    <label for="logid">ID</label>
+                    <input type="text" name="logid" id="logid" />
+                  </p>
+                  <p>
+                    <label for="logpw">PW</label>
+                    <input type="password" name="logpw" id="logpw" />
+                  </p>
+                  <p>
+                    <input  class="loginBtn" type="image"  src="./img/loginBtn.png"/>
+                  </p>
+                  <p class="memberInfo">ID/PW 찾기 | 회원가입 </p>
+                </form>
+              </div>
+            </li>
             <li><a href="cart.html">장바구니</a></li>
             <li><a href="#">구매내역</a></li>
           </ul>
         </div>
-        
+        <script type="text/javascript" >
+          (function($){
+             
+           //로그인 버튼	 
+            $("#loginLabel").click(function(e) {     
+              e.preventDefault();
+              if($('.loginbox').css('display')== 'none'){				
+                  $('.loginbox').slideDown(); 
+              }
+              else {
+                            $('.loginbox').slideUp();
+              }
+            });
+                   //닫힘버튼
+            $(".closeBtn").click(function(e) {
+             
+                 $('.loginbox').slideUp();
+            });				
+          })(jQuery);
+        </script>
       </div>
-      <div class="bottom_rolling">
-        <ul class="ul_ul">
-          <li class="li_li"><a href="notice.html"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;※공지사항&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 필독!! 설 연휴 배송 공지사항입니다.</a></li>
+      <div class="header_bottom">
+        <ul class="ul">
+          <li><a href="notice.html"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;※공지사항&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 필독!! 설 연휴 배송 공지사항입니다.</a></li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;※공지사항 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 배송지연 공지사항입니다.</li>
         </ul>
       </div>
@@ -260,6 +262,5 @@
       </div>
     </footer>
   </div>
-  <script src="https://www.markuptag.com/bootstrap/5/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
