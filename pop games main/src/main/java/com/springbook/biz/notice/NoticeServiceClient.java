@@ -17,6 +17,7 @@ public class NoticeServiceClient {
 
 		// 3. 공지 등록 기능 테스트
 		NoticeVO vo = new NoticeVO();
+//		vo.setSeq(0);	// 예외낼때 사용
 		vo.setTitle("임시 제목");
 		vo.setContent("임시 내용......................................");
 		noticeService.insertNotice(vo);
