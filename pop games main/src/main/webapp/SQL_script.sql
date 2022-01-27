@@ -33,3 +33,4 @@ select * from notice;
 
 insert into notice(seq, title, content)
 values(1, '제목1','내용1');
+
