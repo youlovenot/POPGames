@@ -29,7 +29,9 @@ create table notice(
     cnt int default 0
 	);
     
-select * from notice;
+select * from notice order by seq desc;
+
+delete from notice where seq=20;
 
 insert into notice(seq, title, content)
 values(1, '제목1','내용1');
