@@ -12,7 +12,7 @@ import com.springbook.biz.common.JDBCUtil;
 import com.springbook.biz.notice.NoticeVO;
 
 // DAO(Data Access Object)
-@Repository("noticeDAO")
+@Repository("boardDAO")
 public class NoticeDAO {
 	// JDBC 관련 변수
 	private Connection conn = null;
@@ -20,9 +20,10 @@ public class NoticeDAO {
 	private ResultSet rs = null;
 	
 	// SQL 명령어들
-	private final String NOTICE_INSERT = "insert into notice(seq, title, content) values((select coalesce(max(seq), 0)+1 from notice N),?,?)";
+	private final String NOTICE_INSERT = "insert into notice(seq, title, content)" +
+										"values((select coalesce(max(seq), 0)+1 from notice N),?,?)";
 	private final String NOTICE_UPDATE = "update notice set title=?, content=? where seq=?";
-	private final String NOTICE_DELETE = "delete notice where seq=?";
+	private final String NOTICE_DELETE = "delete from notice where seq=?";
 	private final String NOTICE_GET = "select * from notice where seq=?";
 	private final String NOTICE_LIST = "select * from notice order by seq desc";
 	
@@ -51,7 +52,7 @@ public class NoticeDAO {
 			stmt = conn.prepareStatement(NOTICE_UPDATE);
 			stmt.setString(1, vo.getTitle());
 			stmt.setString(2, vo.getContent());
-			stmt.setInt(3, vo.getSeq());
+			stmt.setInt(3,vo.getSeq());
 			stmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -66,7 +67,7 @@ public class NoticeDAO {
 		try {
 			conn = JDBCUtil.getConnection();
 			stmt = conn.prepareStatement(NOTICE_DELETE);
-			stmt.setInt(1, vo.getSeq());
+			stmt.setInt(1,vo.getSeq());
 			stmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -82,7 +83,7 @@ public class NoticeDAO {
 		try {
 			conn = JDBCUtil.getConnection();
 			stmt = conn.prepareStatement(NOTICE_GET);
-			stmt.setInt(1, vo.getSeq());
+			stmt.setInt(1,vo.getSeq());
 			rs = stmt.executeQuery();
 			if(rs.next()) {
 				notice = new NoticeVO();
@@ -110,6 +111,7 @@ public class NoticeDAO {
 			rs = stmt.executeQuery();
 			while(rs.next()) {
 				NoticeVO notice = new NoticeVO();
+				notice = new NoticeVO();
 				notice.setSeq(rs.getInt("SEQ"));
 				notice.setTitle(rs.getString("TITLE"));
 				notice.setContent(rs.getString("CONTENT"));
@@ -125,3 +127,4 @@ public class NoticeDAO {
 		return noticeList;
 	}
 }
+
