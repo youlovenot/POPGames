@@ -16,7 +16,7 @@ public class MemberServiceClient {
 		// 3. 로그인 기능 테스트
 		MemberVO vo = new MemberVO();
 		vo.setId("youlovenot");
-		vo.setPassword("Pa$$W0rd");
+		vo.setPassword("Pa$$w0rd");
 		
 		MemberVO member = memberService.getMember(vo);
 		if(member != null) {
