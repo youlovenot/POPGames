@@ -4,17 +4,8 @@
     pageEncoding="UTF-8"%>
 
 <%
-	// 1. 검색할 게시글 번호 추출
-	String seq = request.getParameter("seq");
-
-	// 2. DB 연동 처리
-	NoticeVO vo = new NoticeVO();
-	vo.setSeq(Integer.parseInt(seq));
-	
-	NoticeDAO noticeDAO = new NoticeDAO();
-	NoticeVO notice = noticeDAO.getNotice(vo);
-	
-	// 3. 응답 화면 구성
+	// 세션에 저장된 글 목록을 꺼낸다.
+	NoticeVO notice = (NoticeVO) session.getAttribute("notice");
 %>
     
 <!DOCTYPE html>
@@ -28,7 +19,7 @@
 	<h1>글 상세</h1>
 	<a href="logout_proc.jsp">Log-out</a>
 	<hr>
-	<form action="updateNotice_proc.jsp" method="post">
+	<form action="updateNotice.do" method="post">
 		<input name="seq" type="hidden" value="<%= notice.getSeq() %>">
 		<table>
 			<tr>
@@ -57,8 +48,8 @@
 	</form>
 	<hr>
 	<a href="insertNotice.jsp">글등록</a>&nbsp;&nbsp;&nbsp;
-	<a href="deleteNotice_proc.jsp?seq=<%= notice.getSeq() %>">글삭제</a>&nbsp;&nbsp;&nbsp;
-	<a href="getNoticeList.jsp">글목록</a>
+	<a href="deleteNotice.do?seq=<%= notice.getSeq() %>">글삭제</a>&nbsp;&nbsp;&nbsp;
+	<a href="getNoticeList.do">글목록</a>
 </center>
 </body>
 </html>
