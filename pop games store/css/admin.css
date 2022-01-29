@@ -1,0 +1,30 @@
+.table{
+    width: 90%;
+    margin-bottom: 100px;
+    margin-left: 50px;
+    border-collapse: collapse;
+}
+
+.table .tr th{
+    border-bottom: 1px #969496 solid;
+    padding: 10px;
+}
+.table .tr td{
+    border-bottom: 1px #cccccc solid;
+    padding: 10px;
+    text-align: center;
+}
+.section{
+    margin: 80px 0 80px 0;
+    text-align: center;
+  }
+   .section li {
+     display: inline-block;
+    margin: 5px;
+  }
+  .section .title_a {
+    font-size: 40px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+  }
+   

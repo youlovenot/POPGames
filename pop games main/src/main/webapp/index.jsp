@@ -11,7 +11,7 @@
   <script> 
     $(document).ready(function(){
       var height = $(".header_bottom").height();
-      var num = $(".ul li").length;
+      var num = $(".ul li").length; 
       var max = height * num;
       var move = 0;
       function noticeRolling(){
