@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 
 import com.springbook.biz.member.MemberVO;
 
-<<<<<<< HEAD
-=======
+
+
 @Service
 @Aspect
->>>>>>> 9dcd243037b8eb9688e0e009decf9ccf59b15759
+
 public class AfterReturningAdvice {
 	
 	@AfterReturning(pointcut = "PointcutCommon.getPointcut()", returning = "returnObj")
