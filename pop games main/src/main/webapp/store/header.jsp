@@ -34,7 +34,7 @@
           <li><a href="#">GAME</a></li>
         </ul>
           <ul id="join_menu" class="navi">
-            <li><a href="store/login.jsp" >로그인</a> </li>
+            <li><a href="login.jsp" >로그인</a> </li>
             <li><a href="cart.jsp">장바구니</a></li>
             <li><a href="#">구매내역</a></li>
           </ul>

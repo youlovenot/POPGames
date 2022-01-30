@@ -19,6 +19,7 @@
         <div id="header_top">
           <div id="main_logo"><a href="../index.jsp"><img src="../img/main_logo2.png"></a></div>
         <ul id="top_menu">
+        <li><a href="#">로그아웃</a></li>
           <li><a href="admin.html">회원관리</a></li>
           <li><a href="item_upload.html">상품등록</a></li>
           <li><a href="admin.html">상품조회</a></li>

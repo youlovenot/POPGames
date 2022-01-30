@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <link rel="stylesheet" type="text/css" href="css/header.css">
 <link href="css/common.css" rel="stylesheet" type="text/css">
  <script src="js/jquery-3.2.1.min.js"></script>
@@ -34,10 +36,22 @@
           <li><a href="#">GAME</a></li>
         </ul>
           <ul id="join_menu" class="navi">
+          <c:if test="${member == null }">    <!-- 로그인 X -->
             <li><a href="store/login.jsp">로그인</a></li>
             <li><a href="store/cart.jsp">장바구니</a></li>
             <li><a href="#">구매내역</a></li>
+           </c:if>
+           <c:if test="${member != null }">
+	           <c:if test="${id == admin }">
+	           		<li><a href="store/admin.jsp">관리자페이지</a></li>
+	           </c:if>
+           	<li><a href="store/login.jsp">로그아웃</a></li>
+            <li><a href="store/cart.jsp">장바구니</a></li>
+            <li><a href="#">구매내역</a></li>
+           </c:if>
+           
           </ul>
+          
         </div> 
       </div>
       <div class="header_bottom">

@@ -6,8 +6,9 @@
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/index.js"></script>
   <link rel="shortcut icon" type="image⁄x-icon" href="../img/favicon.ico">
+  <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
   <link href="../css/common.css" rel="stylesheet" type="text/css">
-      <link href="../css/login.css" rel="stylesheet" type="text/css">
+  <link href="../css/login.css" rel="stylesheet" type="text/css">
   <script> 
     $(document).ready(function(){
       var height = $(".header_bottom").height();
@@ -69,9 +70,10 @@
                 <span>로그인</span>
             </button>
         </div>
+        <div id="naver_id_login"></div>
         <ul class="find_wrap" id="find_wrap">
-            <li><a target="_blank" href="#"
-                   class="find_text">아이디 찾기 &nbsp;|</a></li>
+            <li><a target="_blank" href="find_id.jsp"
+                   class="find_text">ID/PW 찾기 &nbsp;|</a></li>
             <li><a target="_blank" href="join.jsp" class="find_text">&nbsp;회원가입</a>
             </li>
 
@@ -79,6 +81,16 @@
     </div> 
     <!-- content-->
 </div> 
+<script type="text/javascript">
+	var naver_id_login = new naver_id_login("8NqOu4vn9dJVjoHUpcZi", "https://youlovenot.github.io/POPGames/pop%20games%20store/login.html");
+	var state = naver_id_login.getUniqState();
+	naver_id_login.setButton("green", 3,50);
+	naver_id_login.setDomain(".service.com");
+	naver_id_login.setState(state);
+	naver_id_login.setPopup();
+	naver_id_login.init_naver_id_login();
+
+</script>
     </main>
   </div>
 </body>
