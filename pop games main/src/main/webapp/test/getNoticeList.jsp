@@ -1,11 +1,5 @@
-<%@page import="com.springbook.biz.notice.NoticeVO"%>
-<%@page import="java.util.List"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
-
-<%
-	// 세션에 저장된 글 목록을 꺼낸다.
-	List<NoticeVO> noticeList = (List) session.getAttribute("noticeList");
-%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
 
 <!DOCTYPE html>
 <html>
@@ -43,15 +37,15 @@
 			<th bgcolor="orange" width="100">조회수</th>
 		</tr>
 		
-		<% for(NoticeVO notice : noticeList) { %>
+		<c:forEach items="${noticeList }" var="notice">
 		<tr>
-			<td><%= notice.getSeq() %></td>
-			<td align="left"><a href="getNotice.do?seq=<%=notice.getSeq()%>">
-						<%= notice.getTitle() %></a></td>
-			<td><%= notice.getRegDate() %></td>
-			<td><%= notice.getCnt() %></td>
+			<td>${notice.seq }</td>
+			<td align="left"><a href="getNotice.do?seq=${notice.seq }">
+						${notice.title }</a></td>
+			<td>${notice.regDate }</td>
+			<td>${notice.cnt }</td>
 		</tr>
-		<% } %>
+		</c:forEach>
 	</table>
 	<br>
 	<a href="insertNotice.jsp">새글 등록</a>
