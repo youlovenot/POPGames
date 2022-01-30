@@ -1,17 +1,5 @@
-<%@page import="java.util.List"%>
-<%@page import="com.springbook.biz.notice.impl.NoticeDAO"%>
-<%@page import="com.springbook.biz.notice.NoticeVO"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
-
-<%
-	// 1. 사용자 입력 정보 추출(검색 기능은 나중에 구현)
-	// 2. DB 연동 처리
-	NoticeVO vo = new NoticeVO();
-	NoticeDAO noticeDAO = new NoticeDAO();
-	List<NoticeVO> noticeList = noticeDAO.getNoticeList(vo);
-	
-	// 3. 응답 화면 구성
-%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
 
 <!DOCTYPE html>
 <html>
@@ -22,7 +10,7 @@
 <body>
 <center>
 	<h1>글 목록</h1>
-	<h3>테스트님 환영합니다...<a href="logout_proc.jsp">Log-out</a></h3>
+	<h3>테스트님 환영합니다...<a href="logout.do">Log-out</a></h3>
 	
 	<!-- 검색 시작 -->
 	<form action="getNoticeList.jsp" method="post">
@@ -49,15 +37,15 @@
 			<th bgcolor="orange" width="100">조회수</th>
 		</tr>
 		
-		<% for(NoticeVO notice : noticeList) { %>
+		<c:forEach items="${noticeList }" var="notice">
 		<tr>
-			<td><%= notice.getSeq() %></td>
-			<td align="left"><a href="getNotice.jsp?seq=<%=notice.getSeq()%>">
-						<%= notice.getTitle() %></a></td>
-			<td><%= notice.getRegDate() %></td>
-			<td><%= notice.getCnt() %></td>
+			<td>${notice.seq }</td>
+			<td align="left"><a href="getNotice.do?seq=${notice.seq }">
+						${notice.title }</a></td>
+			<td>${notice.regDate }</td>
+			<td>${notice.cnt }</td>
 		</tr>
-		<% } %>
+		</c:forEach>
 	</table>
 	<br>
 	<a href="insertNotice.jsp">새글 등록</a>
