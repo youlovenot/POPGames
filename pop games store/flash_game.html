@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pop games store</title>
+    <link rel="shortcut icon" type="image⁄x-icon" href="./img/favicon.ico">
+    <link href="./css/common.css" rel="stylesheet" type="text/css">
+    <link href="./css/header.css" rel="stylesheet" type="text/css">
+    <link href="./css/footer.css" rel="stylesheet" type="text/css">
+    <link href="./css/goods.css" rel="stylesheet" type="text/css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script> 
+      $(document).ready(function(){
+        var height = $(".header_bottom").height();
+        var num = $(".ul li").length;
+        var max = height * num;
+        var move = 0;
+        function noticeRolling(){
+          move += height;
+          $(".ul").animate({"top":-move},500,function(){
+            if(move >= max){
+              $(this).css("top",0);
+              move = 0;
+            };
+      
+          });
+        };
+        noticeRollingOff = setInterval(noticeRolling,2000);
+        $(".ul").append($(".ul li").first().clone());
+      
+      });
+      </script>
+</head>
+<body>
+    <div id="container">
+      <a name="top"></a>
+    <header>
+      <div id="header">
+        <div id="header_top">
+          <div id="main_logo"><a href="./index.html"><img src="./img/main_logo.png"></a></div>
+        <ul id="top_menu">
+          <li><a href="goods.html">GOODS</a></li>
+          <li><a href="board_game.html">BOARD GAME</a></li>
+          <li><a href="flash_game.html">FLASH GAME</a></li>
+        </ul>
+          <ul id="join_menu">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">장바구니</a></li>
+            <li><a href="#">구매내역</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+        <div class="header_bottom">
+          <ul class="ul">
+            <li><a href="notice.html"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;공지사항&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 필독!! 설 연휴 배송 공지사항입니다.</a></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;공지사항 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 배송지연 공지사항입니다.</li>
+          </ul>
+          </div>
+      <ul class="section_name">
+        <li class="title">FLASH GAME</li>
+      </ul>
+
+      <div id="panorama_items">
+        <div class="item_box">
+          <ul>
+            <a href="flash_game1.html">
+              <li><img src="./img/flashgame/루미큐브.jpg"></li>
+              <li>루미큐브 </li>
+              <li>장르 : 보드/경쟁</li>
+              <li>게임설명 : </li>
+            </a>
+          </ul>
+        </div>
+        <div class="item_box">
+          <ul>
+            <a href="#">
+              <li><img src="./img/flashgame/스네이크게임.jpg"></li>
+              <li>스네이크게임</li>
+              <li>장르 : 아케이드</li>
+              <li>게임설명 : 당신의 뱀이 자신의 몸에 부딪치지 않게 조종하며, 먹이를 먹어 크기를 키워보세요!</li>
+            </a>
+          </ul>
+        </div>
+        <div class="item_box">
+            <ul>
+              <a href="#">
+                <li><img src="./img/FLASH GAMES.png"></li>
+                <li>리듬게임(이름미정)</li>
+                <li>장르 : 리듬게임</li>
+                <li>게임설명 : 노래에 맞춰 내려오는 노트를 없애보세요!</li>
+              </a>
+            </ul>
+          </div>
+          <div class="item_box">
+            <ul>
+              <a href="#">
+                <li><img src="./img/FLASH GAMES.png"></li>
+                <li>리듬게임(이름미정)</li>
+                <li>장르 : 리듬게임</li>
+                <li>게임설명 : 노래에 맞춰 내려오는 노트를 없애보세요!</li>
+              </a>
+            </ul>
+          </div>
+          <div class="item_box">
+            <ul>
+              <a href="#">
+                <li><img src="./img/FLASH GAMES.png"></li>
+                <li>리듬게임(이름미정)</li>
+                <li>장르 : 리듬게임</li>
+                <li>게임설명 : 노래에 맞춰 내려오는 노트를 없애보세요!</li>
+              </a>
+            </ul>
+          </div>
+          <div class="item_box">
+            <ul>
+              <a href="#">
+                <li><img src="./img/FLASH GAMES.png"></li>
+                <li>리듬게임(이름미정)</li>
+                <li>장르 : 리듬게임</li>
+                <li>게임설명 : 노래에 맞춰 내려오는 노트를 없애보세요!</li>
+              </a>
+            </ul>
+          </div>
+          <div class="item_box">
+            <ul>
+              <a href="#">
+                <li><img src="./img/FLASH GAMES.png"></li>
+                <li>리듬게임(이름미정)</li>
+                <li>장르 : 리듬게임</li>
+                <li>게임설명 : 노래에 맞춰 내려오는 노트를 없애보세요!</li>
+              </a>
+            </ul>
+          </div>
+          <div class="item_box">
+            <ul>
+              <a href="#">
+                <li><img src="./img/FLASH GAMES.png"></li>
+                <li>리듬게임(이름미정)</li>
+                <li>장르 : 리듬게임</li>
+                <li>게임설명 : 노래에 맞춰 내려오는 노트를 없애보세요!</li>
+              </a>
+            </ul>
+          </div>
+          <div class="item_box">
+            <ul>
+              <a href="#">
+                <li><img src="./img/FLASH GAMES.png"></li>
+                <li>리듬게임(이름미정)</li>
+                <li>장르 : 리듬게임</li>
+                <li>게임설명 : 노래에 맞춰 내려오는 노트를 없애보세요!</li>
+              </a>
+            </ul>
+          </div>
+    </main>
+    <div class="clear"></div>
+    <footer>
+      <div id="footer_wrap">
+        <div class="f_logo"><a href="index.html"><img src="img/footer_logo.png"></a></div>
+        <ul id="vision">
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">게임소개</a></li>
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">고객지원</a></li>
+        </ul>
+        <ul id="engagement">
+          <li>CS CENTER</li>
+          <li>02-0000-0000</li>
+          <li>평일 09:00 ~ 18:00 (점심시간 12:00 ~ 13:00)<br>주말 및 공휴일 휴무</li>
+        </ul>
+        <ul id="company_info">
+          <li>pop  주소 : 서울특별시 강남구 테헤란로 218 2층   </li>
+          <li>사업자등록번호 : 100-10-10000</li>
+          <li id="copyright">COPYRIGHTⒸ 2022 POP GAMES. ALL RIGHTS RESERVED.</li>
+        </ul>
+      </div>
+      <div id="footer_fix">
+        <ul>
+          <a href="#top"><li><img src="./img/btn_go_top.png"></li></a>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
