@@ -8,10 +8,7 @@
   <link href="../css/common.css" rel="stylesheet" type="text/css">
   <link href="../css/admin.css" rel="stylesheet" type="text/css">
 <style>
-	.section{
-    margin: 80px 0 30px 0;
-    text-align: center;
-  }
+.section{margin: 80px 0 30px 0;text-align: center;}
 .inputArea { margin:10px 0; }
 select { width:100px; }
 label { display:inline-block; width:70px; padding:5px; }
@@ -19,17 +16,13 @@ label[for='gdsDes'] { display:block; }
 input { width:200px; }
 textarea#gdsDes { width:400px; height:180px; }
 .select_img img { margin:20px 0; }
-
 section#container { 
   margin-top: 10px;
   padding:0 250px; border-top:2px solid #eee; border-bottom:2px solid #eee; }
 section#container::after { content:""; display:block; clear:both; }
 aside { float:left; width:200px; }
 div#container_box { float:right; width:calc(100% - 200px - 20px); }
-.inputArea button{
-  padding: 5px;
-}
-}
+.inputArea button{padding: 5px;}
 </style>
   
 </head>
