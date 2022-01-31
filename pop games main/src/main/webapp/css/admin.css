@@ -15,7 +15,7 @@
     text-align: center;
 }
 .section{
-    margin: 80px 0 80px 0;
+    margin: 80px 0 20px 0;
     text-align: center;
   }
    .section li {
@@ -32,80 +32,7 @@
     margin-bottom: 20px;
   }
 
-  /*item_upload css*/
-  #content{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  section#main {
-    width:950px;
-    margin:0 auto;
-  }
-  section#right {
-    width:950px;
-    margin-bottom: 100px;
-  }
-  /* 상품 구매 정보(상품 제목, 판매가, 제조사, 가격 등)  */
-  section#right #summary h3 {
-    font-size:22px;
-    padding-bottom:8px;
-    margin-bottom: 30px;
-    border-bottom:solid 1px #444444;	
-  }
-  section#right #summary h3 span {
-    color:#444444;
-  }
-  section#right #summary1 {
-    float:left;
-    margin-top:40px;
-  }
-  section#right #summary1 img{
-    width: 120%;
-  }
-  
-  section#right #summary2 {
-    width:520px;
-    float:right;
-    margin-top:50px;
-    margin-left: 50px;
-  }
-  section#right #summary2 .item_upload_table{
-    width:400px;
-    font-size: 16px;
-    text-align: left;
-    
-  }
-  section#right #summary2 .item_upload_table .title{
-    
-  }
-  section#right #summary2 .item_upload_table .title{
-    width:100px;
-    padding-bottom: 5px;
-    padding-left: 15px;
-    
-  }
-  section#right #summary2 .item_upload_table td input{
-    margin-bottom: 5px;
-    margin-left: 15px;
-    font-size: 16px;
-    padding-bottom: 5px;
-    width: 100%;
-
-  }
-  section#right #summary2 .btns{
-    margin-top: 20px;
-    margin-left: 150px;
-  }
-  section#right #summary2 .btn{
-    font-size: 15px;
-    
-  }
-  section#right #summary1 .btn{
-    font-size: 15px;
-    margin-left: 10px;
-    
-  }
-
-  
-   
+  /*item_upload.css*/
+.main table{
+	margin-top:100px;
+}

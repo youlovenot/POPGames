@@ -30,66 +30,60 @@
       </div>
     </header>
     <main class="main">
+      <section id="container">
         <ul class="section">
-            <li class="title_a">상품등록</li>
-          </ul>
-          <div id="content">
-            <section id="main">
-                  <section id="right">
-                      <section id="summary1">
-                          <div class="image">
-                              <img src="./img/goods/goods1.png">
-                              <button class="btn" id="btn_product_update">이미지 파일</button>
-                          </div>
-                      </section>
-                      <section id="summary2">
-                        <form action="/admin/product/update" method="post">
-                          <table class="item_upload_table">
-                            <tr>
-                              <td class="title">상품명</td>                          </tr>
-                          <tr>
-                            <td><input name="productId" value="" readonly></td>
-                          </tr>
-                          <tr>
-                            <td class="title">상품가격</td>
-                        </tr>
-                        <tr>
-                          <td><input name="productId" value="" readonly></td>
-
-                        </tr>
-                        <tr>
-                          <td class="title">재고</td>
-                      </tr>
-                      <tr>
-                        <td><input name="productId" value="" readonly></td>
-
-                      </tr>
-                      <tr>
-                        <td class="title">상품정보</td>
-                    </tr>
-                    <tr>
-                      <td><input name="productId" value="" readonly></td>
-                    </tr>
-                    <tr>
-                      <td class="title">상품등록일</td>
-                  </tr>
-                  <tr>
-                    <td><input name="productId" value="" readonly></td>
-
-                  </tr>
-                  </table>
-                          <div class="btns">
-                            <button class="btn" id="btn_product_update">등록</button>
-                            <button class="btn" id="btn_product_update">수정</button>
-                            <button class="btn" id="btn_product_back">삭제</button>
-                          </div>
-                        </form>
-                      </section>
-                      <div class="clear"></div>
-                  </section>
-              </section>
-              <div class="clear"></div> 
+          <li class="title_a">상품등록</li>
+        </ul>
+        <div id="container_box">        
+          <form role="form" method="post" autocomplete="off" enctype="multipart/form-data">
+          
+          <div class="inputArea">
+            <label for="gdsName">상품명</label>
+            <input type="text" id="gdsName" name="gdsName" />
           </div>
+          
+          <div class="inputArea">
+            <label for="gdsPrice">상품가격</label>
+            <input type="text" id="gdsPrice" name="gdsPrice" />
+          </div>
+          
+          <div class="inputArea">
+            <label for="gdsStock">상품재고</label>
+            <input type="text" id="gdsStock" name="gdsStock" />
+          </div>
+          
+          <div class="inputArea">
+            <label for="gdsDes">상품설명</label>
+            <textarea rows="5" cols="50" id="gdsDes" name="gdsDes"></textarea> 
+          </div>
+          
+          <div class="inputArea">
+            <label for="gdsImg">이미지</label>
+            <input type="file" id="gdsImg" name="file" />
+            <div class="select_img"><img src="" /></div>
+            
+            <script>
+              $("#gdsImg").change(function(){
+                if(this.files && this.files[0]) {
+                  var reader = new FileReader;
+                  reader.onload = function(data) {
+                    $(".select_img img").attr("src", data.target.result).width(500);								
+                  }
+                  reader.readAsDataURL(this.files[0]);
+                }
+              });
+            </script>
+            
+          </div>
+          
+          <div class="inputArea">
+            <button type="submit" id="register_Btn" class="btn btn-primary">등록</button>			
+          </div>
+          
+          </form>
+          
+        </div>
+      </section>
     </main>
     <div class="clear"></div>
     <footer>
