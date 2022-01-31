@@ -28,7 +28,7 @@
 </table>
 </form>
 <hr>
-<a href="getNotice.jsp">글 목록 가기</a>
+<a href="getNoticeList.do">글 목록 가기</a>
 </center>
 </body>
 </html>

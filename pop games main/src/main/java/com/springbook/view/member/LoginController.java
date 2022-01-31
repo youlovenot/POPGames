@@ -1,34 +1,45 @@
 package com.springbook.view.member;
 
-import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.springbook.biz.member.MemberVO;
 import com.springbook.biz.member.impl.MemberDAO;
-import com.springbook.view.controller.Controller;
 
-public class LoginController implements Controller{
-	@Override
-	public String handleRequest(HttpServletRequest request, HttpServletResponse response) {
-		System.out.println("로그인 처리");
+@Controller
+public class LoginController {
+	
+	@RequestMapping(value="/test/login.do", method=RequestMethod.GET)
+	public String loginView(@ModelAttribute("member") MemberVO vo) {
+		System.out.println("로그인 화면으로 이동");
+		vo.setId("test");
+		vo.setPassword("test123");
+		return "login.jsp";
+	}
+	
+	@RequestMapping(value="/test/login.do", method=RequestMethod.POST)
+	public String login(MemberVO vo, MemberDAO memberDAO, HttpServletResponse response, HttpSession session) throws IOException {
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
 		
-		// 1. 사용자 입력 정보 추출
-		String id = request.getParameter("id");
-		String password = request.getParameter("password");
-		
-		// 2. DB 연동 처리
-		MemberVO vo = new MemberVO();
-		vo.setId(id);
-		vo.setPassword(password);
-		
-		MemberDAO memberDAO = new MemberDAO();
 		MemberVO member = memberDAO.getMember(vo);
-		
-		// 3. 화면 네비게이션
+		System.out.println("로그인 인증 처리...");
 		if(member != null) {
-			return "getNoticeList.do";
-		} else {
-			return "login";
+			session.setAttribute("memberName", member.getName());
+			return "redirect:getNoticeList.do";
+		}
+		else {
+			out.println("<script>alert('로그인 정보를 확인해주세요.');</script>");
+			out.flush();
+			return "login.jsp";
 		}
 	}
 	
