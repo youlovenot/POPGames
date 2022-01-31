@@ -2,6 +2,8 @@ create database POPGAMES;
 
 use POPGAMES;
 
+drop table member;
+
 create table member(
 	id varchar(20) primary key,
 	password varchar(20) not null,
@@ -10,16 +12,17 @@ create table member(
 	email varchar(20),
 	zipcode varchar(20),
 	adress1 varchar(20),
-	adress2 varchar(20),
-    role varchar(20) not null
+	adress2 varchar(20)
     );
 
-insert into member(id, password, name, role)
-values('admin','admin1234', '관리자', 'Admin');
+insert into member(id, password, name)
+values('admin','admin1234', '관리자');
 insert into member
-values('youlovenot','Pa$$w0rd', '이상훈','010-1111-1111', 'youlovenot@naver.com','123-456','메롱시티','파인에플집' ,'User'); 
+values('youlovenot','Pa$$w0rd', '이상훈','010-1111-1111', 'youlovenot@naver.com','123-456','메롱시티','파인에플집'); 
 
 select * from member;
+
+drop table notice;
 
 create table notice(
 	seq int primary key,
@@ -29,10 +32,8 @@ create table notice(
     cnt int default 0
 	);
     
-select * from notice order by seq desc;
-
-delete from notice where seq=20;
-
 insert into notice(seq, title, content)
 values(1, '제목1','내용1');
+
+select * from notice order by seq desc;
 
