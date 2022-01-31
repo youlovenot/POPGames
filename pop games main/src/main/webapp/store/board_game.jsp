@@ -16,7 +16,7 @@
     <%@ include file="header.jsp" %>
     <main>
       <ul class="section_name">
-        <li class="title">BOARD GAME</li>
+        <li class="title">BOARD GAME SHOP</li>
       </ul>
 
       <div id="panorama_items">

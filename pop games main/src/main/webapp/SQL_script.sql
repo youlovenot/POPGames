@@ -79,3 +79,16 @@ values(10000,'youlovenot','홍길동','010-1111-1111','111-111','경기도 안�
 
 select * from cartOrder;
 
+create table game(
+	gId int(5) primary key,
+    gName varchar(20),
+    gPeople varchar(20),
+    gAge varchar(20),
+    gTime varchar(20),
+    gDetail varchar(4000)
+);
+
+insert into game(gId,gName,gPeople,gAge,gTime,gDetail)
+values(11111,'루미큐브','2~4명','8세이상','20분','루미큐브 설명입니다.');
+
+select * from game;
