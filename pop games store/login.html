@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pop games</title>
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+    <link rel="shortcut icon" type="image⁄x-icon" href="./img/favicon.ico">
+    <link href="./css/common.css" rel="stylesheet" type="text/css">
+    <link href="./css/header.css" rel="stylesheet" type="text/css">
+    <link href="./css/login.css" rel="stylesheet" type="text/css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script> 
+      $(document).ready(function(){
+        var height = $(".header_bottom").height();
+        var num = $(".ul li").length;
+        var max = height * num;
+        var move = 0;
+        function noticeRolling(){
+          move += height;
+          $(".ul").animate({"top":-move},500,function(){
+            if(move >= max){
+              $(this).css("top",0);
+              move = 0;
+            };
+      
+          });
+        };
+        noticeRollingOff = setInterval(noticeRolling,2000);
+        $(".ul").append($(".ul li").first().clone());
+      
+      });
+      </script>
+</head>
+<body>
+    <div id="container">
+      <a name="top"></a>
+    <header>
+      <div id="header">
+        <div id="header_top">
+          <div id="main_logo"><a href="./index.html"><img src="./img/main_logo2.png"></a></div>
+        <ul id="top_menu">
+          <li><a href="goods.html">GOODS SHOP</a></li>
+          <li><a href="board_game.html">BOARD GAME SHOP</a></li>
+          <li><a href="#">GAME</a></li>
+        </ul>
+          <ul id="join_menu">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">장바구니</a></li>
+            <li><a href="#">구매내역</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <ul class="section_name">
+        <li class="title">로그인</li>
+      </ul>
+<!-- wrapper -->
+<div id="wrapper">
+    <!-- content-->
+    <div id="content">
+        <!-- ID -->
+        <div>
+            <h3 class="join_title">
+                <label for="id">아이디</label>
+            </h3>
+            <span class="box int_id">
+                <input type="text" id="id" class="int" maxlength="20">
+            </span>
+            <span class="error_next_box"></span>
+        </div>
+        <!-- PW1 -->
+        <div>
+            <h3 class="join_title"><label for="pswd1">비밀번호</label></h3>
+            <span class="box int_pass">
+                <input type="text" id="pswd1" class="int" maxlength="20">
+                <img src="./img/m_icon_pass.png" id="pswd1_img1" class="pswdImg">
+            </span>
+            <span class="error_next_box"></span>
+        </div>
+        
+        <!-- JOIN BTN-->
+        <div class="btn_area">
+            <button type="button" id="btnJoin">
+                <span>로그인</span>
+            </button>
+        </div>
+        <!-- 네이버 로그인 버튼 노출 영역 -->
+        <div id="naver_id_login"></div>
+        <!--<div class="naver_login">네이버 아이디로 로그인</div>-->
+        <ul class="find_wrap" id="find_wrap">
+            <li><a target="_blank" href="find_id.html"
+                   class="find_text">아이디 찾기 &nbsp;|</a></li>
+            <li><a target="_blank" href="join.html" class="find_text">&nbsp;회원가입</a>
+            </li>
+
+        </ul>
+    </div> 
+    <!-- content-->
+</div> 
+<!-- wrapper -->
+<script type="text/javascript">
+	var naver_id_login = new naver_id_login("8NqOu4vn9dJVjoHUpcZi", "https://youlovenot.github.io/POPGames/pop%20games%20store/login.html");
+	var state = naver_id_login.getUniqState();
+	naver_id_login.setButton("green", 3,50);
+	naver_id_login.setDomain(".service.com");
+	naver_id_login.setState(state);
+	naver_id_login.setPopup();
+	naver_id_login.init_naver_id_login();
+
+</script>
+    </main>
+  </div>
+</body>
+</html>

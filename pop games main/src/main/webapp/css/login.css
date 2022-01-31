@@ -1,0 +1,140 @@
+.find_wrap li{
+    display: inline-block;
+}
+.find_wrap{
+	margin-bottom: 100px;
+    color: #9fa09f;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
+.find_wrap li a{
+    text-decoration: none;
+    color: #6e6e6e;
+}
+/*로그인*/
+#naver_id_login{
+    margin-left: 120px;
+    margin-top: 10px; 
+}
+.naver_login{
+    color:#6e6e6e;   
+    height: 40px;
+    width: 70%;
+    margin-left: 140px;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 20px;
+}
+#logo {
+    width: 240px;
+    height: 44px;
+    cursor: pointer;
+}
+#content {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 460px;
+}
+.section_name {
+    text-align: center;
+    margin: 80px 0 40px 0;
+  }
+   .section_name li {
+     display: inline-block;
+    margin: 10px;
+  }
+   .section_name .title {
+    font-size: 35px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+/* 입력폼 */
+
+input:focus {
+    outline: none;
+}
+
+
+h3 {
+    margin: 19px 0 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.box {
+    margin-left: 50px;
+    display: block;
+    width: 80%;
+    height: 51px;
+    border: solid 1px #dadada;
+    padding: 10px 14px 10px 14px;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+}
+.int {
+    display: block;
+    position: relative;
+    width: 80%;
+    height: 29px;
+    border: none;
+    background: #fff;
+    font-size: 15px; 
+}
+
+.box.int_id {
+    padding-right: 110px;
+}
+
+.box.int_pass {
+    padding-right: 40px;
+}
+.join_title{
+    margin-left: 50px;
+}
+
+.pswdImg {
+    width: 18px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+
+
+select {
+    width: 100%;
+    height: 29px;
+    font-size: 15px;
+    background: #fff url(https://static.nid.naver.com/images/join/pc/sel_arr_2x.gif) 100% 50% no-repeat;
+    background-size: 20px 8px;
+    -webkit-appearance: none;
+    display: inline-block;
+    text-align: start;
+    border: none;
+    cursor: default;
+    font-family: Dotum,'돋움',Helvetica,sans-serif;
+}
+
+/* 버튼 */
+
+.btn_area {
+    margin: 30px 0 0 0 ;
+}
+
+#btnJoin {
+    margin-left: 120px;
+    width: 50%;
+    padding: 21px 0 17px;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #9fa09f;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Dotum,'돋움',Helvetica,sans-serif;
+}

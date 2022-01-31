@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <link rel="stylesheet" type="text/css" href="css/header.css">
 <link href="css/common.css" rel="stylesheet" type="text/css">
  <script src="js/jquery-3.2.1.min.js"></script>
@@ -34,48 +36,23 @@
           <li><a href="#">GAME</a></li>
         </ul>
           <ul id="join_menu" class="navi">
-            <li><a href="#" id="loginLabel">로그인</a>
-            	<div class="loginbox">
-                <form action="login.php" method="post">
-                  <p>
-                    <label for="logid">ID</label>
-                    <input type="text" name="logid" id="logid" />
-                  </p>
-                  <p>
-                    <label for="logpw">PW</label>
-                    <input type="password" name="logpw" id="logpw" />
-                  </p>
-                  <p>
-                    <input  class="loginBtn" type="image"  src="./img/loginBtn.png"/>
-                  </p>
-                  <p class="memberInfo">ID/PW 찾기 | 회원가입 </p>
-                </form>
-              </div>
-            </li>
+          <c:if test="${member == null }">    <!-- 로그인 X -->
+            <li><a href="store/login.jsp">로그인</a></li>
             <li><a href="store/cart.jsp">장바구니</a></li>
             <li><a href="#">구매내역</a></li>
+           </c:if>
+           <c:if test="${member != null }">
+	           <c:if test="${id == admin }">
+	           		<li><a href="store/admin.jsp">관리자페이지</a></li>
+	           </c:if>
+           	<li><a href="store/login.jsp">로그아웃</a></li>
+            <li><a href="store/cart.jsp">장바구니</a></li>
+            <li><a href="#">구매내역</a></li>
+           </c:if>
+           
           </ul>
+          
         </div> 
-        <script type="text/javascript" >
-          (function($){
-             
-           //로그인 버튼	 
-            $("#loginLabel").click(function(e) {     
-              e.preventDefault();
-              if($('.loginbox').css('display')== 'none'){				
-                  $('.loginbox').slideDown(); 
-              }
-              else {
-                            $('.loginbox').slideUp();
-              }
-            });
-                   //닫힘버튼
-            $(".closeBtn").click(function(e) {
-             
-                 $('.loginbox').slideUp();
-            });				
-          })(jQuery);
-        </script>
       </div>
       <div class="header_bottom">
         <ul class="ul">
