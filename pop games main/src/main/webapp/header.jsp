@@ -31,9 +31,10 @@
         <div id="header_top">
           <div id="main_logo"><a href="index.jsp"><img src="img/main_logo2.png"></a></div>
         <ul id="top_menu">
+          <li><a href="store/gameList.jsp">GAME</a></li>
           <li><a href="store/goods.jsp">GOODS SHOP</a></li>
           <li><a href="store/board_game.jsp">BOARD GAME SHOP</a></li>
-          <li><a href="store/gameList.jsp">GAME</a></li>
+          
         </ul>
           <ul id="join_menu" class="navi">
           <c:if test="${member == null }">    <!-- 로그인 X -->
