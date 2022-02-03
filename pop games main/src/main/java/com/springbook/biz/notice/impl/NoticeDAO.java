@@ -25,7 +25,9 @@ public class NoticeDAO {
 	private final String NOTICE_UPDATE = "update notice set title=?, content=? where seq=?";
 	private final String NOTICE_DELETE = "delete from notice where seq=?";
 	private final String NOTICE_GET = "select * from notice where seq=?";
-	private final String NOTICE_LIST = "select * from notice order by seq desc";
+//	private final String NOTICE_LIST = "select * from notice order by seq desc";
+	private final String NOTICE_LIST_T = "select * from notice where title like '%'||?||'%' order by seq desc";
+	private final String NOTICE_LIST_C = "select * from notice where content like '%'||?||'%' order by seq desc";
 	
 	// CRUD 기능의 메소드 구현
 	// 공지 등록
@@ -107,7 +109,14 @@ public class NoticeDAO {
 		List<NoticeVO> noticeList = new ArrayList<NoticeVO>();
 		try {
 			conn = JDBCUtil.getConnection();
-			stmt = conn.prepareStatement(NOTICE_LIST);
+			if(vo.getSearchCondition().equals("TITLE")) {
+				stmt = conn.prepareStatement(NOTICE_LIST_T);
+			} else if(vo.getSearchCondition().equals("CONTENT")) {
+				stmt = conn.prepareStatement(NOTICE_LIST_C);
+			}
+			stmt.setString(1, vo.getSearchKeyword());
+			System.out.println("검색 내용 : " + stmt);
+//			stmt = conn.prepareStatement(NOTICE_LIST);
 			rs = stmt.executeQuery();
 			while(rs.next()) {
 				NoticeVO notice = new NoticeVO();
@@ -127,4 +136,3 @@ public class NoticeDAO {
 		return noticeList;
 	}
 }
-

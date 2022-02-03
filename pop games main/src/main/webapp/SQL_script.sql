@@ -10,14 +10,15 @@ create table member(
 	email varchar(20),
 	zipcode varchar(20),
 	adress1 varchar(20),
-	adress2 varchar(20),
-    role varchar(20) not null
+	adress2 varchar(20)
     );
 
-insert into member(id, password, name, role)
-values('admin','admin1234', '관리자', 'Admin');
+insert into member(id, password, name)
+values('admin','admin1234', '관리자');
+insert into member(id, password, name)
+values('test','test123','테스트');
 insert into member
-values('youlovenot','Pa$$w0rd', '이상훈','010-1111-1111', 'youlovenot@naver.com','123-456','메롱시티','파인에플집' ,'User'); 
+values('youlovenot','Pa$$w0rd', '이상훈','010-1111-1111', 'youlovenot@naver.com','123-456','메롱시티','파인에플집'); 
 
 select * from member;
 

@@ -20,7 +20,7 @@ public class AfterReturningAdvice {
 		
 		if(returnObj instanceof MemberVO) {
 			MemberVO member = (MemberVO) returnObj;
-			if(member.getRole().equals("Admin")) {
+			if(member.getId().equals("admin")) {
 				System.out.println(member.getName() + " 로그인(Admin)");
 			}
 		}

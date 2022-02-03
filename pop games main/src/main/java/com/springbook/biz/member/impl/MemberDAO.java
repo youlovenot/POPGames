@@ -41,7 +41,6 @@ public class MemberDAO{
 				member.setZipcode(rs.getString("ZIPCODE"));
 				member.setAdress1(rs.getString("ADRESS1"));
 				member.setAdress2(rs.getString("ADRESS2"));
-				member.setRole(rs.getString("ROLE"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

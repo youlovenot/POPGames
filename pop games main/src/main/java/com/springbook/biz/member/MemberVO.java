@@ -10,7 +10,6 @@ public class MemberVO {
 	private String zipcode;
 	private String adress1;
 	private String adress2;
-	private String role;
 	
 	// Getter/Setter 메소드
 	public String getId() {
@@ -61,17 +60,11 @@ public class MemberVO {
 	public void setAdress2(String adress2) {
 		this.adress2 = adress2;
 	}
-	public String getRole() {
-		return role;
-	}
-	public void setRole(String role) {
-		this.role = role;
-	}
 	
 	@Override
 	public String toString() {
-		return "UserVO [id=" + id + ", password=" + password + ", name=" + name
+		return "MemberVO [id=" + id + ", password=" + password + ", name=" + name
 				+ ", phone=" + phone + ", email=" + email + ", zipcode=" + zipcode
-				+ ", adress1=" + adress1 + ", adress2=" + adress2 + ", role=" + role + "]";
+				+ ", adress1=" + adress1 + ", adress2=" + adress2 + "]";
 	}
 }

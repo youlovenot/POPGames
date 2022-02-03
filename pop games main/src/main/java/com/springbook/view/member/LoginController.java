@@ -27,6 +27,9 @@ public class LoginController {
 	
 	@RequestMapping(value="/test/login.do", method=RequestMethod.POST)
 	public String login(MemberVO vo, MemberDAO memberDAO, HttpServletResponse response, HttpSession session) throws IOException {
+		if(vo.getId()==null||vo.getId().equals("")) {
+			throw new IllegalArgumentException("아이디는 반드시 입력해야 합니다.");
+		}
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		
