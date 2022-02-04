@@ -37,13 +37,10 @@
                     <tr>
                         <th>결제수단</th>
                         <td><div class="pay_with_list">
-                            <strong>무통장 입금</strong>
+                            <strong>신용카드</strong>
                             <ul>
-                                <li>입금은행 : 신한</li>
-                                <li>입금계좌 : 60020040059</li>
-                                <li>예금주명 : 팝게임즈</li>
-                                <li>입금금액 : <strong class="deposit_money">15,500원</strong></li>
-                                <li>입금자명 : 임애선</li>
+                                <li>결제금액 : <strong class="deposit_money">21,300원</strong></li>
+                                
                             </ul>
                         </div>
                         </td>
@@ -58,7 +55,7 @@
                     </tr>
                     <tr>
                         <th>주문상품</th>
-                        <td>[팝게임즈 - 굿즈] 팝콘 키홀더</td>
+                        <td>[팝게임즈 - 굿즈] 팝콘 키홀더 외 1건</td>
                     </tr>
                     <tr>
                         <th>주문자명</th>
@@ -70,14 +67,14 @@
                             <p>
                                 <strong>임애선</strong> <br />
                                 [03730] 서울특별시 서대문구 통일로 395 (홍제 센트럴 IPARK) 11<br />
-                                  /    /  010-7417-7576<br />
-                                배송요청사항 : 
+                                  /    /  010-1111-1111<br />
+                                배송요청사항 : 문앞에 두고 가주세요.
                             </p>
                         </td>
                     </tr>
                     <tr>
                         <th>상품 금액</th>
-                        <td><strong class="order_payment_sum">13,000원</strong>
+                        <td><strong class="order_payment_sum">18,800원</strong>
                             <span class="add_currency"></span>
                         </td>
                     </tr>
@@ -90,7 +87,7 @@
                 
                     <tr>
                         <th>총 결제금액</th>
-                        <td><strong class="order_payment_sum">15,500원</strong>
+                        <td><strong class="order_payment_sum">21,300원</strong>
                             <span class="add_currency"></span>
                         </td>
                     </tr>

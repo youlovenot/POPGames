@@ -71,11 +71,11 @@
                 <section id="explanation">
                     <h3>상품 설명</h3>
                     <div class="detail">
-                        <img src="../img/goods_ex1.png">
-                        <img src="../img/goods_ex2.png">
-                        <img src="../img/goods_ex3.png">
-                        <img src="../img/goods_ex4.png">
-                        <img src="../img/goods_ex5.png">
+                        <img src="../img/goods/goods_ex1.png">
+                        <img src="../img/goods/goods_ex2.png">
+                        <img src="../img/goods/goods_ex3.png">
+                        <img src="../img/goods/goods_ex4.png">
+                        <img src="../img/goods/goods_ex5.png">
                     </div>
                 </section>
                 <section id="required">

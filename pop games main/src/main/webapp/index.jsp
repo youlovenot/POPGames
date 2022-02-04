@@ -72,9 +72,54 @@
       </div>
       <a class="prev" onclick="plusSlides(-1, 0)">&lang;</a>
       <a class="next" onclick="plusSlides(1, 0)">&rang;</a>
+		<ul class="section_name">
+        <li class="title">GAME</li>
+        <li><a id="more_items" href="store/gameList.jsp">
+          <div class="plus">더보기 +</div>
+        </a></li>
+      </ul>
 
+      <div id="panorama_items">
+        <div class="item_box">
+          <ul>
+            <a href="store/game_detail.jsp">
+              <li><img src="img/flashgame/루미큐브.jpg"></li>
+              <li>루미큐브 </li>
+              <li>장르 : 보드/경쟁</li>
+            </a>
+          </ul>
+        </div>
+        <div class="item_box">
+          <ul>
+            <a href="store/game_detail.jsp">
+              <li><img src="img/flashgame/스네이크게임.jpg"></li>
+              <li>스네이크게임</li>
+              <li>장르 : 아케이드</li>
+            </a>
+          </ul>
+        </div>
+        <div class="item_box">
+          <ul>
+            <a href="store/game_detail.jsp">
+              <li><img src="img/flashgame/루미큐브.jpg"></li>
+              <li>루미큐브 </li>
+              <li>장르 : 보드/경쟁</li>
+            </a>
+          </ul>
+        </div>
+        <div class="item_box">
+          <ul>
+            <a href="store/game_detail.jsp">
+              <li><img src="img/flashgame/루미큐브.jpg"></li>
+              <li>루미큐브 </li>
+              <li>장르 : 보드/경쟁</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+      <div class="clear"></div>
       <ul class="section_name">
-        <li class="title">GOODS</li>
+        <li class="title">GOODS SHOP</li>
         <li><a id="more_items" href="store/goods.jsp">
           <div class="plus">더보기 +</div>
         </a></li>
@@ -120,7 +165,7 @@
       </div>
       <div class="clear"></div>
       <ul class="section_name">
-        <li class="title">BOARD GAME</li>
+        <li class="title">BOARD GAME SHOP</li>
         <li><a id="more_items" href="store/board_game.jsp">
           <div class="plus">더보기 +</div>
         </a></li>

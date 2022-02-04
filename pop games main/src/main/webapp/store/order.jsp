@@ -3,6 +3,8 @@
 <html lang="ko">
 <head>
   <title>pop games</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="https://service.iamport.kr/js/iamport.payment-1.1.5.js"></script>
   <script src="../js/jquery-3.2.1.min.js"></script>
   <script src="../js/index.js"></script>
   <link rel="shortcut icon" type="image⁄x-icon" href="../img/favicon.ico">
@@ -69,15 +71,15 @@
                                 <div>
                                     <ul>
                                         <li class="col1">[상품 구매 금액]:</li>
-                                        <li class="col2">19,000원</li>
+                                        <li class="col2">18,800원</li>
                                     </ul>
                                     <ul>
                                         <li class="col1">배송비:</li>
-                                        <li class="col2">3,000원</li>
+                                        <li class="col2">2,500원</li>
                                     </ul>
                                     <ul>
                                         <li class="col1"><span>총 주문 합계 금액</span></li>
-                                        <li class="col2"><span>21,000원</span></li>
+                                        <li class="col2"><span>21,300원</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -218,31 +220,10 @@
                                     <dd>
                                         <div class="form_element">
                                             <ul class="payment_progress_select">
-                                                <li id="settlekindType_gb">
-                                                    <input type="radio" id="settleKind_gb" name="settleKind" value="gb"/>
-                                                    <label for="settleKind_gb" class="choice_s">무통장 입금</label>
-                                                </li>
+                                                
                                                 <li id="settlekindType_pc">
                                                     <input type="radio" id="settleKind_pc" name="settleKind" value="pc"/>
                                                     <label for="settleKind_pc" class="choice_s">신용카드</label>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                        <!-- N : 무통장입금 -->
-                                        <div id="settlekind_general_gb" class="pay_bankbook_box">
-                                            <em class="pay_bankbook_txt">( 무통장 입금 의 경우 입금확인 후부터 배송단계가 진행됩니다. )</em>
-                                            <ul>
-                                                <li>
-                                                    <strong>입금자명</strong>
-                                                    <input type="text" name="bankSender"/>
-                                                </li>
-                                                <li>
-                                                    <strong>입금은행</strong>
-                                                    <select name="bankAccount" class="chosen-select">
-                                                        <option value="">선택하세요</option>
-                                                        <option value="2">신한 60020040059 팝게임즈</option>
-                                                    </select>
                                                 </li>
                                             </ul>
                                         </div>
@@ -272,8 +253,46 @@
                     <!-- //payment_final -->
                 </div>
                 <ul id="pay_buttons">
-                    <li><a href="order_end.jsp"><img src="../img/paybutton.png"></a></li>
+                    <li><button id="check_module" type="button"><a href="#"><img src="../img/paybutton.png"></a></button></li>
                 </ul>
+                <script>
+                    $("#check_module").click(function () {
+                    var IMP = window.IMP; 
+                    IMP.init('imp48496879');
+                    IMP.request_pay({
+                    pg: 'inicis', 
+                 
+                    pay_method: 'card',
+                
+                    merchant_uid: 'merchant_' + new Date().getTime(),
+                
+                    name: '주문명:결제',
+                
+                    amount: 10,
+                
+                    buyer_email: 'popgames@pop.com',
+                    buyer_name: '팝게임즈',
+                    buyer_tel: '010-1234-5678',
+                    buyer_addr: '서울특별시 강남구 삼성동',
+                    buyer_postcode: '123-456',
+                    m_redirect_url: 'https://www.yourdomain.com/payments/complete'
+                
+                    }, function (rsp) {
+                    console.log(rsp);
+                    if (rsp.success) {
+                    var msg = '결제가 완료되었습니다.';
+                    msg += '고유ID : ' + rsp.imp_uid;
+                    msg += '상점 거래ID : ' + rsp.merchant_uid;
+                    msg += '결제 금액 : ' + rsp.paid_amount;
+                    msg += '카드 승인번호 : ' + rsp.apply_num;
+                    } else {
+                    var msg = '결제에 실패하였습니다.';
+                    msg += '에러내용 : ' + rsp.error_msg;
+                    }
+                    alert(msg);
+                    });
+                    });
+                    </script>
         </section>
             <div class="clear"></div> 
         </div> 

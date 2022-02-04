@@ -34,11 +34,12 @@ div#container_box { float:right; width:calc(100% - 200px - 20px); }
         <div id="header_top">
           <div id="main_logo"><a href="../index.jsp"><img src="../img/main_logo2.png"></a></div>
         <ul id="top_menu">
-          <li><a href="goods.html">회원관리</a></li>
-          <li><a href="board_game.html">상품등록</a></li>
-          <li><a href="board_game.html">상품조회</a></li>
-          <li><a href="board_game.html">게임등록</a></li>
-          <li><a href="board_game.html">게임조회</a></li>
+          <li><a href="#">로그아웃</a></li>
+          <li><a href="admin.jsp">회원관리</a></li>
+          <li><a href="item_upload.jsp">상품등록</a></li>
+          <li><a href="admin.jsp">상품조회</a></li>
+          <li><a href="item_upload.jsp">게임등록</a></li>
+          <li><a href="admin.jsp">게임조회</a></li>
         </ul>
         </div>
       </div>

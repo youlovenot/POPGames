@@ -91,6 +91,9 @@
 .pay_buttons li img{
     width: 600px;
 }
+#pay_buttons li button{
+    border: 0;
+}
 .order_end img{
     width: 450px;
     margin-left: 200px;
