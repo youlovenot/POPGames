@@ -3,14 +3,13 @@ package com.springbook.biz.notice.impl;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
-import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.springbook.biz.notice.NoticeVO;
 
 @Repository
-public class NoticeDAOMybatis extends SqlSessionDaoSupport {
+public class NoticeDAOMybatis {
 	@Autowired
 	private SqlSessionTemplate mybatis;
 	
