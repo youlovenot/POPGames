@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <!DOCTYPE html>
 <html>
@@ -43,7 +44,7 @@
 			<td>${notice.seq }</td>
 			<td align="left"><a href="getNotice.do?seq=${notice.seq }">
 						${notice.title }</a></td>
-			<td>${notice.regDate }</td>
+			<td><fmt:formatDate value="${notice.regDate}" pattern="yyyy-MM-dd"/></td>
 			<td>${notice.cnt }</td>
 		</tr>
 		</c:forEach>
