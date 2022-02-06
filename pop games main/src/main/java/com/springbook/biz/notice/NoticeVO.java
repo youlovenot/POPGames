@@ -2,18 +2,36 @@ package com.springbook.biz.notice;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+
+import org.hibernate.annotations.ColumnDefault;
 import org.springframework.web.multipart.MultipartFile;
 
 
 // VO(Value Object)
+@Entity
+@Table(name="NOTICE")
 public class NoticeVO {
+	@Id
+	@GeneratedValue
 	private int seq;
 	private String title;
 	private String content;
+	@Temporal(TemporalType.DATE)
 	private Date regDate;
+	@ColumnDefault("0")
 	private int cnt;
+	@Transient
 	private String searchCondition;
+	@Transient
 	private String searchKeyword;
+	@Transient
 	private MultipartFile uploadFile;
 	
 	// Getter/Setter 메소드

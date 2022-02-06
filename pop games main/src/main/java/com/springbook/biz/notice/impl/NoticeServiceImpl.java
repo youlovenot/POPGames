@@ -11,7 +11,7 @@ import com.springbook.biz.notice.NoticeVO;
 @Service("noticeService")
 public class NoticeServiceImpl implements NoticeService {
 	@Autowired
-	private NoticeDAOMybatis noticeDAO;
+	private NoticeDAOJPA noticeDAO;
 	
 	public void insertNotice(NoticeVO vo) {
 //		if(vo.getSeq()==0) {
