@@ -35,7 +35,7 @@ select * from notice order by seq desc;
 delete from notice where seq=20;
 
 insert into notice(seq, title, content)
-values(2, '제목1','내용1');
+values(1, '제목1','내용1');
 
 create table product(
 	pId int(4) primary key,   /*상품번호*/
