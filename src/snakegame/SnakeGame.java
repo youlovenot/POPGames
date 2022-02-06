@@ -20,20 +20,20 @@ public class SnakeGame extends JFrame {
 	private Image screenImage;
 	private Graphics screenGraphic;
 
-	private Image background = new ImageIcon(Main.class.getResource("../img/introBackGround.jpg")).getImage();
+	private static Image background = new ImageIcon(Main.class.getResource("../img/introBackGround.jpg")).getImage();
 	private JLabel menuBar = new JLabel(new ImageIcon(Main.class.getResource("../img/menuBar.png")));
 
 	private ImageIcon exitButtonEnteredImage = new ImageIcon(Main.class.getResource("../img/exitButtonEntered.png"));
 	private ImageIcon exitButtonBasicImage = new ImageIcon(Main.class.getResource("../img/exitButtonBasic.png"));
 	private ImageIcon startButtonEnteredImage = new ImageIcon(Main.class.getResource("../img/startButtonEntered.png"));
-	private ImageIcon startButtonBasicImage = new ImageIcon(Main.class.getResource("../img/startButtonBasic.png"));
+	private static ImageIcon startButtonBasicImage = new ImageIcon(Main.class.getResource("../img/startButtonBasic.png"));
 
 	private JButton exitButton = new JButton(exitButtonBasicImage);
-	private JButton startButton = new JButton(startButtonBasicImage);
+	private static JButton startButton = new JButton(startButtonBasicImage);
 	
 	public static Game game;
 	
-	public boolean isGameScreen = false;
+	public static boolean isGameScreen = false;
 
 	private int mouseX, mouseY;
 
@@ -130,7 +130,7 @@ public class SnakeGame extends JFrame {
 		add(menuBar);
 
 		Music introMusic = new Music("introMusic.mp3", true);
-		//introMusic.start();
+		introMusic.start();
 	}
 
 	public void paint(Graphics g) {
@@ -149,6 +149,14 @@ public class SnakeGame extends JFrame {
 		setFocusable(true);
 	}
 
+	public static void backMain()
+	{
+		isGameScreen=false;
+		startButton.setVisible(true);
+		background=new ImageIcon(Main.class.getResource("../img/introBackGround.jpg")).getImage();
+		game.close();
+	}
+	
 	public void screenDraw(Graphics g) {
 		g.drawImage(background, 0, 0, null);
 		if(isGameScreen)game.screenDraw(g);
