@@ -38,7 +38,7 @@
         </ul>
           <ul id="join_menu" class="navi">
           <c:if test="${member == null }">    <!-- 로그인 X -->
-            <li><a href="store/login.jsp">로그인</a></li>
+            <li><a href="store/login.do">로그인</a></li>
             <li><a href="store/cart.jsp">장바구니</a></li>
             <li><a href="#">구매내역</a></li>
            </c:if>

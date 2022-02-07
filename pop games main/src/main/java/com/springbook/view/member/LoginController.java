@@ -17,15 +17,13 @@ import com.springbook.biz.member.impl.MemberDAO;
 @Controller
 public class LoginController {
 	
-	@RequestMapping(value="/test/login.do", method=RequestMethod.GET)
+	@RequestMapping(value="*/login.do", method=RequestMethod.GET)
 	public String loginView(@ModelAttribute("member") MemberVO vo) {
 		System.out.println("로그인 화면으로 이동");
-		vo.setId("test");
-		vo.setPassword("test123");
 		return "login.jsp";
 	}
 	
-	@RequestMapping(value="/test/login.do", method=RequestMethod.POST)
+	@RequestMapping(value="*/login.do", method=RequestMethod.POST)
 	public String login(MemberVO vo, MemberDAO memberDAO, HttpServletResponse response, HttpSession session) throws IOException {
 		if(vo.getId()==null||vo.getId().equals("")) {
 			throw new IllegalArgumentException("아이디는 반드시 입력해야 합니다.");

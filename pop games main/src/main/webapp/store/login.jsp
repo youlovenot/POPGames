@@ -50,7 +50,7 @@
                 <label for="id">아이디</label>
             </h3>
             <span class="box int_id">
-                <input type="text" id="id" class="int" maxlength="20">
+                <input type="text" name="id" id="id" class="int" maxlength="20">
             </span>
             <span class="error_next_box"></span>
         </div>
@@ -58,7 +58,7 @@
         <div>
             <h3 class="join_title"><label for="pswd1">비밀번호</label></h3>
             <span class="box int_pass">
-                <input type="text" id="pswd1" class="int" maxlength="20">
+                <input type="password" name="password" id="pswd1" class="int" maxlength="20">
                 <img src="../img/m_icon_pass.png" id="pswd1_img1" class="pswdImg">
             </span>
             <span class="error_next_box"></span>
